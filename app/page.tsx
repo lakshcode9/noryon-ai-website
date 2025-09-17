@@ -1,5 +1,6 @@
-import Spline from '@splinetool/react-spline/next';
+import HeroSpline from "../components/HeroSpline";
 import ThemeToggle from "../components/ThemeToggle";
+import MobileNav from "../components/MobileNav";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
             <a href="#contact" className="hover:text-white transition-colors">Contact</a>
           </nav>
           <div className="flex items-center gap-3">
+            <MobileNav />
             <ThemeToggle />
             <a href="#contact" className="inline-flex items-center rounded-md bg-[#04a8ae] px-4 py-2 text-sm font-medium text-white shadow-[0_0_25px_8px_rgba(0,200,207,0.35)] hover:bg-[#00cad1] transition-colors">
             Start a project
@@ -34,7 +36,7 @@ export default function Home() {
       <section className="relative mx-auto max-w-7xl px-6 py-16 sm:py-20 md:py-24 theme-blur-blob">
         {/* Background Spline in top-right, free-floating without borders */}
         <div aria-hidden className="absolute inset-y-0 right-0 w-[55%] max-w-[48rem] z-0 spline-mix">
-          <Spline
+          <HeroSpline
             scene="https://prod.spline.design/KAINVqb7zStDrlph/scene.splinecode"
             style={{ filter: "var(--spline-filter, none)" }}
           />

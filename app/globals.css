@@ -172,6 +172,18 @@
   background-blend-mode: screen;
 }
 
+@media (max-width: 768px) {
+  /* Reduce blur layers and heavy backdrops on mobile */
+  .shiny-blue {
+    background-image:
+      radial-gradient(700px 380px at -10% -10%, #00cad122 0%, transparent 60%),
+      radial-gradient(620px 360px at 110% -10%, #0584af22 0%, transparent 60%);
+  }
+  .theme-blur-blob::before {
+    background: none !important;
+  }
+}
+
 /* Extra Spline blending in light mode */
 [data-theme="light"] .spline-mix canvas {
   mix-blend-mode: screen;
