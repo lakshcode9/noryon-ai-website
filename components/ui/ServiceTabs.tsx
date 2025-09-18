@@ -22,6 +22,17 @@ export default function ServiceTabs({ title, colorClass = "#00cad1", tiers }: Se
   const [active, setActive] = React.useState<TierKey>(tiers[0]?.key ?? "basic");
   const activeTier = tiers.find(t => t.key === active) ?? tiers[0];
 
+  function hexToRgba(hex: string, alpha: number): string {
+    const sanitized = hex.replace("#", "");
+    const bigint = parseInt(sanitized.length === 3
+      ? sanitized.split("").map(c => c + c).join("")
+      : sanitized, 16);
+    const r = (bigint >> 16) & 255;
+    const g = (bigint >> 8) & 255;
+    const b = bigint & 255;
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  }
+
   return (
     <div className="rounded-xl bg-secondary ring-1 ring-white/10 p-6">
       <div className="flex items-center gap-2 mb-3">
@@ -37,10 +48,15 @@ export default function ServiceTabs({ title, colorClass = "#00cad1", tiers }: Se
           <button
             key={t.key}
             onClick={() => setActive(t.key)}
-            className={`rounded px-2 py-1 ring-1 ring-white/15 transition-colors ${
-              active === t.key ? "bg-white/15 text-white" : "bg-white/5 text-white/80 hover:bg-white/10"
-            }`}
-            style={active === t.key ? { boxShadow: "0 0 14px 6px rgba(0,202,209,0.25)" } : undefined}
+            className={`rounded px-2 py-1 ring-1 ring-white/15 text-white transition-all`}
+            aria-pressed={active === t.key}
+            style={{
+              backgroundColor: active === t.key
+                ? hexToRgba(colorClass, 0.22) // lighter when active
+                : hexToRgba(colorClass, 0.10),
+              boxShadow: active === t.key ? "0 0 14px 6px rgba(0, 202, 209, 0.18)" : undefined,
+              filter: active === t.key ? "saturate(120%)" : undefined,
+            }}
           >
             {t.label}
           </button>
