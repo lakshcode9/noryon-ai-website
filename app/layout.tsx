@@ -22,6 +22,11 @@ export const metadata: Metadata = {
   creator: "Noryon AI",
   publisher: "Noryon AI",
   robots: "index, follow",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
