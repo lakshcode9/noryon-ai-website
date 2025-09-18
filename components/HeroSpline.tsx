@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Spline = dynamic(() => import("@splinetool/react-spline"), {
   ssr: false,
@@ -16,6 +16,8 @@ type Props = {
 
 export default function HeroSpline({ scene, className, style }: Props) {
   const [isMobile, setIsMobile] = useState(false);
+  const [inView, setInView] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   // Detect mobile once on client
   useEffect(() => {
@@ -26,14 +28,36 @@ export default function HeroSpline({ scene, className, style }: Props) {
     return () => mq.removeEventListener?.("change", update);
   }, []);
 
-  if (isMobile) return null;
+  // Only mount the heavy Spline canvas while the section is in view
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced) {
+      setInView(false);
+      return;
+    }
+    const io = new IntersectionObserver(
+      entries => {
+        const entry = entries[0];
+        setInView(entry.isIntersecting);
+      },
+      { root: null, rootMargin: "200px", threshold: 0 }
+    );
+    io.observe(containerRef.current);
+    return () => io.disconnect();
+  }, []);
+
+  if (isMobile) return <div ref={containerRef} className={className} style={style} />;
 
   return (
-    <Spline
-      scene={scene}
-      className={className}
-      style={{ width: "100%", height: "100%", ...(style || {}) }}
-    />
+    <div ref={containerRef} className={className} style={style}>
+      {inView ? (
+        <Spline
+          scene={scene}
+          style={{ width: "100%", height: "100%" }}
+        />
+      ) : null}
+    </div>
   );
 }
 

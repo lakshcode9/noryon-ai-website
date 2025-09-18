@@ -36,7 +36,7 @@ export default function Home() {
 
       <section className="relative mx-auto max-w-7xl px-6 py-16 sm:py-20 md:py-24 theme-blur-blob">
         {/* Background Spline in top-right, free-floating without borders */}
-        <div aria-hidden className="absolute inset-y-0 right-0 w-[55%] max-w-[48rem] z-0 spline-mix">
+        <div aria-hidden className="absolute inset-y-0 right-0 w-[55%] max-w-[48rem] z-0 spline-mix will-change-transform">
           <HeroSpline
             scene="https://prod.spline.design/KAINVqb7zStDrlph/scene.splinecode"
             style={{ filter: "var(--spline-filter, none)" }}
