@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import OpeningSplash from "../components/OpeningSplash";
 
 const manrope = Manrope({
   variable: "--font-geist-sans",
@@ -52,6 +53,7 @@ export default function RootLayout({
       <body
         className={`${manrope.variable} ${jetbrainsMono.variable} antialiased`}
       >
+        <OpeningSplash />
         {/* Prevent FOUC: set initial theme before hydration */}
         <script
           dangerouslySetInnerHTML={{

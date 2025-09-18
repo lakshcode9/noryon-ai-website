@@ -198,3 +198,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Opening splash animation (logo scale + glow + fade) */
+.splash-mask {
+  animation: splashFade 2.2s ease forwards;
+}
+.splash-logo {
+  animation: splashLogo 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  filter: drop-shadow(0 0 24px rgba(0,202,209,0.35));
+}
+@keyframes splashLogo {
+  0% { opacity: 0; transform: scale(0.8); }
+  40% { opacity: 1; transform: scale(1.06); }
+  70% { transform: scale(1.0); }
+  100% { opacity: 1; transform: scale(1.0); }
+}
+@keyframes splashFade {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
