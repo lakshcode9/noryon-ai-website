@@ -1,6 +1,7 @@
 import HeroSpline from "../components/HeroSpline";
 import ThemeToggle from "../components/ThemeToggle";
 import MobileNav from "../components/MobileNav";
+import Image from "next/image";
 import ServiceTabs from "../components/ui/ServiceTabs";
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
       <header className="w-full sticky top-0 z-20 border-b border-white/10 bg-[#20263699] backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2 select-none">
-            <span className="inline-block h-3 w-3 rounded-full bg-[#00cad1] shadow-[0_0_20px_6px_rgba(0,202,209,0.7)]" />
+            <Image src="/@favicon.png" alt="Noryon" width={24} height={24} className="h-6 w-6" />
             <span className="font-mono text-sm tracking-widest uppercase text-accent">Noryon AI</span>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm text-white/80">
