@@ -49,8 +49,7 @@ export default function HeroSpline({ scene, className, style }: Props) {
       {inView ? (
         <>
           <Script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.61/build/spline-viewer.js" strategy="afterInteractive" />
-          {/* Keep fill sizing and allow existing CSS to blend the canvas */}
-          {/* @ts-ignore - web component */}
+          {/* @ts-expect-error web component */}
           <spline-viewer url={scene} style={{ width: "100%", height: "100%" }} />
         </>
       ) : null}
