@@ -148,6 +148,15 @@
   filter: var(--spline-filter, brightness(0.96) saturate(1.05));
 }
 
+/* Shiny mystical blue glow for active elements */
+.glow-shiny-blue {
+  box-shadow:
+    0 0 0 1px rgba(0, 202, 209, 0.35),
+    0 8px 28px rgba(0, 200, 207, 0.25),
+    0 16px 48px rgba(5, 132, 175, 0.25),
+    inset 0 0 24px rgba(4, 168, 174, 0.18);
+}
+
 @layer base {
   * {
     border-color: var(--border);
