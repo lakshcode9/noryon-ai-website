@@ -16,12 +16,12 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Noryon AI - AI-Powered Business Solutions",
+  title: "Noryon - AI-Powered Business Solutions",
   description: "Automate your business with AI chatbots, voice agents, and automation services. 24/7 customer support, lead generation, and growth automation.",
   keywords: "AI automation, chatbots, voice agents, business automation, lead generation, customer support, AI solutions",
-  authors: [{ name: "Noryon AI" }],
-  creator: "Noryon AI",
-  publisher: "Noryon AI",
+  authors: [{ name: "Noryon" }],
+  creator: "Noryon",
+  publisher: "Noryon",
   robots: "index, follow",
   icons: {
     icon: "/@favicon.png",
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://noryon.ai",
-    title: "Noryon AI - AI-Powered Business Solutions",
+    title: "Noryon - AI-Powered Business Solutions",
     description: "Automate your business with AI chatbots, voice agents, and automation services. 24/7 customer support, lead generation, and growth automation.",
-    siteName: "Noryon AI",
+    siteName: "Noryon",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Noryon AI - AI-Powered Business Solutions",
+    title: "Noryon - AI-Powered Business Solutions",
     description: "Automate your business with AI chatbots, voice agents, and automation services. 24/7 customer support, lead generation, and growth automation.",
   },
 };

@@ -3,6 +3,7 @@ import ThemeToggle from "../components/ThemeToggle";
 import MobileNav from "../components/MobileNav";
 import Image from "next/image";
 import ServiceTabs from "../components/ui/ServiceTabs";
+import ServiceCard from "@/components/ui/ServiceCard";
 import { StarBorder } from "@/components/ui/star-border";
 import Script from "next/script";
 
@@ -13,7 +14,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2 select-none">
             <Image src="/@favicon.png" alt="Noryon" width={24} height={24} className="h-6 w-6" />
-            <span className="font-mono text-sm tracking-widest uppercase text-accent">Noryon AI</span>
+            <span className="font-mono text-sm tracking-widest uppercase text-accent">Noryon</span>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm text-white/80">
             <a href="#services" className="hover:text-white transition-colors">Services</a>
@@ -87,274 +88,65 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-            {/* Chatbot Services */}
-            <ServiceTabs
+            {/* New visual cards */}
+            <ServiceCard
               title="Chatbot Services"
-              colorClass="#00cad1"
-              tiers={[
-                {
-                  key: "basic",
-                  label: "Basic",
-                  tagline:
-                    "A simple AI assistant that gives your business a modern touch and saves time.",
-                  description:
-                    "It answers customer questions automatically and captures leads so you never miss an opportunity.",
-                  features: [
-                    "Instantly answers common customer questions (hours, pricing, services)",
-                    "Collects customer info and sends it straight to your inbox or CRM",
-                    "Guides visitors toward booking forms or next steps automatically",
-                    "Provides 24/7 coverage so you never miss a lead",
-                    "Passes complex requests to a human when needed",
-                  ],
-                },
-                {
-                  key: "smart",
-                  label: "Smart Booking",
-                  tagline:
-                    "More than just a Q&A bot — this chatbot books appointments, takes payments, and integrates with your systems.",
-                  description:
-                    "Built to keep your business running smoothly while handling FAQs and bookings in one conversation.",
-                  features: [
-                    "Handles FAQs and booking in one conversation",
-                    "Automatically logs leads in your CRM for easy follow-up",
-                    "Accepts deposits or booking fees securely online",
-                    "Works seamlessly across your website, Messenger, and Instagram",
-                    "Provides a simple analytics dashboard for tracking performance",
-                  ],
-                },
-                {
-                  key: "full",
-                  label: "Full Omnichannel AI",
-                  tagline:
-                    "An enterprise-grade chatbot built for scale.",
-                  description:
-                    "Engages customers across every major channel, supports multiple languages, and delivers advanced insights — all while staying compliant and secure.",
-                  features: [
-                    "Includes Basic + Smart features",
-                    "Advanced AI with memory for natural conversations",
-                    "Connects on all major platforms (Instagram, Messenger, WhatsApp, etc.)",
-                    "Multi-language support for global customers",
-                    "Custom dashboards & analytics",
-                    "Full compliance (GDPR, HIPAA, SOC2)",
-                    "Dedicated support & uptime guarantees",
-                  ],
-                },
+              accent="#00cad1"
+              tagline="From basic FAQ to full omnichannel AI with memory and analytics."
+              features={[
+                "Answers FAQs instantly and captures leads",
+                "Books appointments and accepts payments",
+                "Connects across web, IG, WhatsApp & more",
+                "Dashboards, analytics, and compliance ready",
               ]}
             />
 
-            {/* Voice AI Services */}
-            <ServiceTabs
+            <ServiceCard
               title="Voice AI Services"
-              colorClass="#00cad1"
-              tiers={[
-                {
-                  key: "basic",
-                  label: "Basic",
-                  tagline:
-                    "A professional voice for your business without extra staff.",
-                  description:
-                    "This AI phone assistant makes sure every call is answered and every lead is captured.",
-                  features: [
-                    "Instantly answers common questions like hours, pricing, and services",
-                    "Collects caller details and sends them directly to your inbox/CRM",
-                    "Transfers calls to the right person so customers reach help faster",
-                    "Always on — never miss a call, even after hours",
-                    "Provides simple voicemail and call forwarding for backup",
-                  ],
-                },
-                {
-                  key: "smart",
-                  label: "Smart Booking",
-                  tagline:
-                    "Turn missed calls into booked appointments.",
-                  description:
-                    "This AI-powered agent manages scheduling and payments while keeping your calendar full.",
-                  features: [
-                    "Books appointments directly into your calendar",
-                    "Automatically adds caller info into your CRM for follow-up",
-                    "Accepts deposits or booking fees securely over the phone",
-                    "Supports multiple languages so no customer is left out",
-                    "Tracks call activity and provides clear booking analytics",
-                  ],
-                },
-                {
-                  key: "full",
-                  label: "Full AI Assistant",
-                  tagline:
-                    "A complete enterprise-ready voice system that works like a virtual call center.",
-                  description:
-                    "Handles complex workflows, multiple locations, and delivers advanced insights at scale.",
-                  features: [
-                    "Provides natural, human-like conversations with memory of past interactions",
-                    "Manages advanced tasks like rescheduling, order tracking, and ticket creation",
-                    "Supports multiple languages and multiple business locations seamlessly",
-                    "Connects across all voice channels (phone, WhatsApp, call centers, etc.)",
-                    "Generates in-depth analytics and custom reports for management",
-                    "Meets strict enterprise security and compliance standards (GDPR/HIPAA/SOC2)",
-                    "Backed by dedicated support and guaranteed uptime",
-                  ],
-                },
+              accent="#00cad1"
+              tagline="Answer every call, book more, speak every language."
+              features={[
+                "24/7 phone assistant that never misses a lead",
+                "Scheduling + payments directly on the call",
+                "Transfers, voicemail, and call analytics",
+                "Multi-language support at enterprise quality",
               ]}
             />
 
-            {/* Automation Services */}
-            <ServiceTabs
+            <ServiceCard
               title="Automation Services"
-              colorClass="#0584af"
-              tiers={[
-                {
-                  key: "basic",
-                  label: "Basic",
-                  tagline:
-                    "A simple automation setup to save time on repetitive tasks and keep workflows running smoothly.",
-                  description: "",
-                  features: [
-                    "Automates workflows (forms, reminders, notifications)",
-                    "Connects core tools (Google Sheets, email, calendar)",
-                    "Stores and organizes lead data automatically",
-                    "Cuts down admin work and saves time",
-                    "Runs 24/7 in the background",
-                  ],
-                },
-                {
-                  key: "smart",
-                  label: "Smart",
-                  tagline:
-                    "An advanced system that links your key business tools to streamline operations and boost efficiency.",
-                  description: "",
-                  features: [
-                    "All Basic features included",
-                    "CRM integration (HubSpot, Zoho, Salesforce)",
-                    "Payment gateway automation (Stripe, Square, PayPal)",
-                    "Automated reports (daily, weekly, monthly)",
-                    "Multi-step workflows across multiple apps",
-                    "Performance dashboard with analytics",
-                  ],
-                },
-                {
-                  key: "full",
-                  label: "Full Back-End AI",
-                  tagline:
-                    "A custom-built automation suite for mid-to-large businesses, powered by AI and designed for scale.",
-                  description: "",
-                  features: [
-                    "All Basic + Smart features included",
-                    "AI document processing (contracts, invoices, forms)",
-                    "Custom API integrations with existing systems",
-                    "Automated data extraction & enrichment",
-                    "Advanced analytics & reporting tools",
-                    "Scalable workflows for high-volume tasks",
-                    "Enterprise security, compliance & monitoring",
-                  ],
-                },
+              accent="#0584af"
+              tagline="Automate your back office and customer ops end-to-end."
+              features={[
+                "Connect CRM, billing, calendars and forms",
+                "Reporting with daily/weekly summaries",
+                "AI document processing and enrichment",
+                "Custom APIs and high‑volume workflows",
               ]}
             />
 
-            {/* Review & Reputation */}
-            <ServiceTabs
+            <ServiceCard
               title="Review & Reputation"
-              colorClass="#00c8cf"
-              tiers={[
-                {
-                  key: "basic",
-                  label: "Basic",
-                  tagline:
-                    "A simple system that helps small businesses collect more positive reviews with minimal effort.",
-                  description: "",
-                  features: [
-                    "Sends automated SMS or email requests after service",
-                    "Drives customers directly to Google & Facebook review pages",
-                    "Tracks requests and responses in a simple dashboard",
-                    "Follows up automatically until feedback is left",
-                  ],
-                },
-                {
-                  key: "smart",
-                  label: "Smart",
-                  tagline:
-                    "An advanced review automation system designed to protect and grow a brand’s reputation.",
-                  description: "",
-                  features: [
-                    "Includes all Basic features",
-                    "Requests reviews on Google, Facebook, Yelp & more",
-                    "Filters negative feedback privately before it goes public",
-                    "Sends reminders to customers who don’t respond",
-                    "Provides a branded, customizable review request experience",
-                    "Tracks ratings, volume, and trends in an analytics dashboard",
-                  ],
-                },
-                {
-                  key: "full",
-                  label: "AI Suite",
-                  tagline:
-                    "A fully customized AI-powered reputation management system for enterprises.",
-                  description:
-                    "Built to monitor, analyze, and respond to reviews across multiple channels.",
-                  features: [
-                    "Includes all Basic + Smart features",
-                    "Analyzes reviews with AI sentiment analysis (positive, neutral, negative)",
-                    "Monitors competitors and provides comparison reports",
-                    "Generates personalized AI-assisted replies to reviews",
-                    "Supports multiple locations and languages",
-                    "Provides custom analytics dashboards for leadership",
-                    "Ensures enterprise security, compliance, and uptime guarantees",
-                  ],
-                },
+              accent="#00c8cf"
+              tagline="Grow ratings, filter negatives, and reply with AI."
+              features={[
+                "Automated SMS/email review requests",
+                "Routes to Google, Facebook, Yelp & more",
+                "Private negative feedback capture",
+                "Trends & analytics dashboard",
               ]}
             />
 
-            {/* Analytics & Reporting */}
             <div className="xl:col-span-2">
-              <ServiceTabs
+              <ServiceCard
                 title="Analytics & Reporting"
-                colorClass="#04a8ae"
-                tiers={[
-                  {
-                    key: "basic",
-                    label: "Basic",
-                    tagline:
-                      "A simple AI-powered dashboard that gives small businesses clear visibility into their key numbers.",
-                    description:
-                      "No more digging through spreadsheets — data is tracked 24/7 so insights are always available.",
-                    features: [
-                      "Generates automated daily/weekly lead & sales reports",
-                      "Displays top KPIs in a simple web dashboard",
-                      "Delivers summary reports via email or SMS",
-                      "Tracks data 24/7 so insights are always available",
-                    ],
-                  },
-                  {
-                    key: "smart",
-                    label: "Smart",
-                    tagline:
-                      "An advanced analytics system that integrates with multiple platforms to give growing businesses a complete view of performance.",
-                    description: "",
-                    features: [
-                      "Includes all Basic features",
-                      "Integrates data from CRM, ads, website & booking tools",
-                      "Tracks custom KPIs tailored to business goals",
-                      "Detects trends with AI-powered insights",
-                      "Provides performance comparisons (week-over-week, month-over-month)",
-                      "Creates exportable reports for team collaboration",
-                    ],
-                  },
-                  {
-                    key: "full",
-                    label: "AI Suite",
-                    tagline:
-                      "A fully customized analytics and reporting platform designed for enterprises.",
-                    description:
-                      "Built to deliver real-time insights, predictive forecasts, and executive-level dashboards.",
-                    features: [
-                      "Includes all Basic + Smart features",
-                      "Predicts sales, churn, and demand with AI forecasting",
-                      "Builds custom dashboards for leadership & departments",
-                      "Supports multi-location & multi-language reporting",
-                      "Integrates with ERP systems & enterprise data warehouses",
-                      "Offers advanced visualizations & in-depth reports",
-                      "Guarantees enterprise-level security, compliance & uptime",
-                    ],
-                  },
+                accent="#04a8ae"
+                tagline="Real-time KPIs, forecasting, and executive dashboards."
+                features={[
+                  "Daily/weekly lead and sales reports",
+                  "Integrates CRM, ads, bookings & web",
+                  "AI trend detection and comparisons",
+                  "Enterprise dashboards and data exports",
                 ]}
               />
             </div>
@@ -471,7 +263,7 @@ export default function Home() {
       <footer className="relative border-t border-white/10 bg-[#202636]">
         <div className="mx-auto max-w-7xl px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 select-none">
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-[#00cad1] shadow-[0_0_14px_6px_rgba(0,202,209,0.35)]" />
+            <Image src="/@favicon.png" alt="Noryon" width={20} height={20} className="h-5 w-5" />
             <span className="font-mono text-xs tracking-widest uppercase text-accent">Noryon AI</span>
           </div>
           <nav className="flex items-center gap-6 text-sm text-white/80">
