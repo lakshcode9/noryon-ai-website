@@ -42,8 +42,9 @@ export default function Home() {
         <div aria-hidden className="absolute inset-y-0 right-0 w-[90%] lg:w-[80%] xl:w-[75%] 2xl:w-[72%] max-w-none z-0 spline-mix will-change-transform">
           <HeroSpline
             scene="https://prod.spline.design/czRKzd-MFaaJMpVz/scene.splinecode"
-            style={{ filter: "var(--spline-filter, none)", transform: "scale(1.5)", transformOrigin: "right center" }}
+            style={{ filter: "var(--spline-filter, none)", transform: "scale(1.5) translateX(6%)", transformOrigin: "right center" }}
           />
+          <div className="pointer-events-none absolute -bottom-10 right-[6%] w-[26rem] h-[16rem] md:w-[30rem] md:h-[18rem] blur-2xl" style={{ background: "radial-gradient(60% 60% at 50% 20%, rgba(0,202,209,0.35) 0%, rgba(0,200,207,0.25) 36%, rgba(5,132,175,0.2) 52%, transparent 78%)" }} />
         </div>
 
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center pointer-events-none">
