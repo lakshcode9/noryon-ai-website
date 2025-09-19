@@ -45,12 +45,9 @@ export default function Home() {
             scene="https://prod.spline.design/czRKzd-MFaaJMpVz/scene.splinecode"
             style={{ filter: "var(--spline-filter, none)", transform: "translateX(40%) scale(1.2)", transformOrigin: "right center" }}
           />
-          {/* Smooth gradient fade to blend with next section */}
+          {/* Solid bottom overlay to cover the leg seam exactly */}
           <div
-            className="absolute bottom-0 left-0 right-0 h-[15vh] md:h-[18vh] lg:h-[20vh] pointer-events-none z-[1]"
-            style={{
-              background: "linear-gradient(to bottom, transparent 0%, rgba(32,38,54,0.3) 40%, rgba(32,38,54,0.8) 80%, rgba(32,38,54,1) 100%)"
-            }}
+            className="absolute bottom-0 left-0 right-0 h-[18vh] md:h-[20vh] lg:h-[22vh] bg-background opacity-95 pointer-events-none z-[1]"
           />
         </div>
 
