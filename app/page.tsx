@@ -8,7 +8,7 @@ import Script from "next/script";
 export default function Home() {
   return (
     <main className="min-h-dvh bg-background text-foreground relative overflow-hidden shiny-blue">
-      <header className="w-full sticky top-0 z-20 border-b border-white/10 bg-[#20263699] backdrop-blur-sm">
+      <header className="w-full sticky top-0 z-20 border-b border-white/10 bg-[#20263699]">
         <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2 select-none">
             <Image src="/@favicon.png" alt="Noryon" width={24} height={24} className="h-6 w-6" />
@@ -31,13 +31,13 @@ export default function Home() {
       </header>
 
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-40 left-1/2 h-[50rem] w-[50rem] -translate-x-1/2 rounded-full bg-[#04a8ae33] blur-3xl" />
-        <div className="absolute top-40 right-1/4 h-96 w-96 rounded-full bg-[#00c8cf33] blur-3xl" />
-        <div className="absolute bottom-10 left-1/5 h-72 w-72 rounded-full bg-[#0584af33] blur-3xl" />
+        <div className="absolute -top-40 left-1/2 h-[50rem] w-[50rem] -translate-x-1/2 rounded-full bg-[#04a8ae33]" />
+        <div className="absolute top-40 right-1/4 h-96 w-96 rounded-full bg-[#00c8cf33]" />
+        <div className="absolute bottom-10 left-1/5 h-72 w-72 rounded-full bg-[#0584af33]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(5,132,175,0.08),transparent_60%)]" />
       </div>
 
-      <section className="relative mx-auto max-w-7xl px-6 py-16 sm:py-20 md:py-24 theme-blur-blob">
+      <section className="relative mx-auto max-w-7xl px-6 py-16 sm:py-20 md:py-24">
         {/* Background Spline positioned at extreme right */}
         <div aria-hidden className="absolute inset-y-0 right-0 w-[100vw] z-0 spline-mix will-change-transform">
           <HeroSpline
