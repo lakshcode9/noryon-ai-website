@@ -38,11 +38,11 @@ export default function Home() {
       </div>
 
       <section className="relative mx-auto max-w-7xl px-6 py-16 sm:py-20 md:py-24 theme-blur-blob">
-        {/* Background Spline in top-right, free-floating without borders */}
-        <div aria-hidden className="absolute inset-y-0 right-0 w-[90%] lg:w-[80%] xl:w-[75%] 2xl:w-[72%] max-w-none z-0 spline-mix will-change-transform">
+        {/* Background Spline positioned at extreme right */}
+        <div aria-hidden className="absolute inset-y-0 right-0 w-[100vw] z-0 spline-mix will-change-transform">
           <HeroSpline
             scene="https://prod.spline.design/czRKzd-MFaaJMpVz/scene.splinecode"
-            style={{ filter: "var(--spline-filter, none)", transform: "scale(1.5)", transformOrigin: "right center" }}
+            style={{ filter: "var(--spline-filter, none)", transform: "translateX(40%) scale(1.2)", transformOrigin: "right center" }}
           />
         </div>
 
