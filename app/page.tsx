@@ -2,7 +2,6 @@ import HeroSpline from "../components/HeroSpline";
 import ThemeToggle from "../components/ThemeToggle";
 import MobileNav from "../components/MobileNav";
 import Image from "next/image";
-import ServiceTabs from "../components/ui/ServiceTabs";
 import ServiceCard from "@/components/ui/ServiceCard";
 import { StarBorder } from "@/components/ui/star-border";
 import Script from "next/script";
@@ -19,8 +18,8 @@ export default function Home() {
           <nav className="hidden md:flex items-center gap-6 text-sm text-white/80">
             <a href="#services" className="hover:text-white transition-colors">Services</a>
             <a href="#work" className="hover:text-white transition-colors">Work</a>
-            <a href="#book" className="hover:text-white transition-colors">Book</a>
             <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+            <a href="#book" className="hover:text-white transition-colors">Book</a>
           </nav>
           <div className="flex items-center gap-3">
             <MobileNav />
@@ -88,65 +87,209 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-            {/* New visual cards */}
+            {/* Chatbots */}
             <ServiceCard
               title="Chatbot Services"
               accent="#00cad1"
-              tagline="From basic FAQ to full omnichannel AI with memory and analytics."
-              features={[
-                "Answers FAQs instantly and captures leads",
-                "Books appointments and accepts payments",
-                "Connects across web, IG, WhatsApp & more",
-                "Dashboards, analytics, and compliance ready",
+              tiers={[
+                {
+                  key: "basic",
+                  label: "Basic",
+                  tagline: "A simple AI assistant that answers FAQs and captures leads automatically.",
+                  features: [
+                    "Instant answers for hours, pricing, services",
+                    "Lead capture to inbox or CRM",
+                    "Guides to booking/forms",
+                    "24/7 coverage; hands‑off",
+                  ],
+                },
+                {
+                  key: "smart",
+                  label: "Smart",
+                  tagline: "Booking + payments with integrated workflows.",
+                  features: [
+                    "Handles FAQs and booking in one flow",
+                    "Logs leads to CRM automatically",
+                    "Takes deposits or fees online",
+                    "Works across site, Messenger, Instagram",
+                  ],
+                },
+                {
+                  key: "full",
+                  label: "Full AI",
+                  tagline: "Omnichannel AI with memory, analytics and compliance.",
+                  features: [
+                    "Advanced AI with conversation memory",
+                    "Instagram, Messenger, WhatsApp and more",
+                    "Custom dashboards and analytics",
+                    "Compliance: GDPR / HIPAA / SOC2",
+                  ],
+                },
               ]}
             />
 
+            {/* Voice */}
             <ServiceCard
               title="Voice AI Services"
               accent="#00cad1"
-              tagline="Answer every call, book more, speak every language."
-              features={[
-                "24/7 phone assistant that never misses a lead",
-                "Scheduling + payments directly on the call",
-                "Transfers, voicemail, and call analytics",
-                "Multi-language support at enterprise quality",
+              tiers={[
+                {
+                  key: "basic",
+                  label: "Basic",
+                  tagline: "A professional voice that answers every call and captures leads.",
+                  features: [
+                    "Instant answers for common questions",
+                    "Sends caller details to inbox/CRM",
+                    "Smart transfers so callers reach the right person",
+                    "After‑hours coverage + voicemail",
+                  ],
+                },
+                {
+                  key: "smart",
+                  label: "Smart",
+                  tagline: "Turn missed calls into booked appointments.",
+                  features: [
+                    "Books directly into your calendar",
+                    "Adds caller info to CRM",
+                    "Accepts deposits during the call",
+                    "Multi‑language support",
+                  ],
+                },
+                {
+                  key: "full",
+                  label: "Full AI",
+                  tagline: "Enterprise voice system with complex workflows and analytics.",
+                  features: [
+                    "Natural conversations with memory",
+                    "Rescheduling, order tracking, ticket creation",
+                    "All voice channels: phone, WhatsApp, call centers",
+                    "Deep analytics + compliance (GDPR/HIPAA/SOC2)",
+                  ],
+                },
               ]}
             />
 
+            {/* Automation */}
             <ServiceCard
               title="Automation Services"
               accent="#0584af"
-              tagline="Automate your back office and customer ops end-to-end."
-              features={[
-                "Connect CRM, billing, calendars and forms",
-                "Reporting with daily/weekly summaries",
-                "AI document processing and enrichment",
-                "Custom APIs and high‑volume workflows",
+              tiers={[
+                {
+                  key: "basic",
+                  label: "Basic",
+                  tagline: "Save time on repetitive tasks and keep workflows running.",
+                  features: [
+                    "Automates forms, reminders, notifications",
+                    "Connects Sheets, email, calendar",
+                    "Auto‑stores and organizes leads",
+                    "Runs 24/7 in the background",
+                  ],
+                },
+                {
+                  key: "smart",
+                  label: "Smart",
+                  tagline: "Connect core tools to streamline operations and boost efficiency.",
+                  features: [
+                    "Includes all Basic",
+                    "CRM integrations (HubSpot, Zoho, Salesforce)",
+                    "Payments (Stripe, Square, PayPal)",
+                    "Multi‑step workflows + performance dashboard",
+                  ],
+                },
+                {
+                  key: "full",
+                  label: "Full AI",
+                  tagline: "Custom AI‑powered back‑end built for scale.",
+                  features: [
+                    "AI document processing",
+                    "Custom API integrations",
+                    "Data extraction & enrichment",
+                    "Advanced analytics, monitoring, compliance",
+                  ],
+                },
               ]}
             />
 
+            {/* Reputation */}
             <ServiceCard
               title="Review & Reputation"
               accent="#00c8cf"
-              tagline="Grow ratings, filter negatives, and reply with AI."
-              features={[
-                "Automated SMS/email review requests",
-                "Routes to Google, Facebook, Yelp & more",
-                "Private negative feedback capture",
-                "Trends & analytics dashboard",
+              tiers={[
+                {
+                  key: "basic",
+                  label: "Basic",
+                  tagline: "Collect more positive reviews with minimal effort.",
+                  features: [
+                    "Automated SMS/email requests",
+                    "Direct to Google & Facebook",
+                    "Simple request tracking",
+                    "Follow‑ups until feedback is left",
+                  ],
+                },
+                {
+                  key: "smart",
+                  label: "Smart",
+                  tagline: "Protect and grow your brand’s reputation.",
+                  features: [
+                    "Includes all Basic",
+                    "Requests on Google, Facebook, Yelp & more",
+                    "Filters negative feedback privately",
+                    "Branded experience + trends dashboard",
+                  ],
+                },
+                {
+                  key: "full",
+                  label: "Full AI",
+                  tagline: "Enterprise AI reputation management suite.",
+                  features: [
+                    "AI sentiment analysis",
+                    "Competitor monitoring + comparison",
+                    "Personalized AI replies",
+                    "Multi‑location/language + executive dashboards",
+                  ],
+                },
               ]}
             />
 
+            {/* Analytics */}
             <div className="xl:col-span-2">
               <ServiceCard
                 title="Analytics & Reporting"
                 accent="#04a8ae"
-                tagline="Real-time KPIs, forecasting, and executive dashboards."
-                features={[
-                  "Daily/weekly lead and sales reports",
-                  "Integrates CRM, ads, bookings & web",
-                  "AI trend detection and comparisons",
-                  "Enterprise dashboards and data exports",
+                tiers={[
+                  {
+                    key: "basic",
+                    label: "Basic",
+                    tagline: "Simple KPIs always available without spreadsheets.",
+                    features: [
+                      "Daily/weekly lead & sales reports",
+                      "Top KPIs in a clean dashboard",
+                      "Summary reports via email/SMS",
+                      "24/7 data tracking",
+                    ],
+                  },
+                  {
+                    key: "smart",
+                    label: "Smart",
+                    tagline: "Integrates multiple platforms to give a complete view.",
+                    features: [
+                      "Includes all Basic",
+                      "CRM, ads, website & booking data",
+                      "Custom KPIs + AI trend detection",
+                      "Week‑over‑week/month‑over‑month comparisons",
+                    ],
+                  },
+                  {
+                    key: "full",
+                    label: "Full AI",
+                    tagline: "Enterprise analytics with forecasting and exec dashboards.",
+                    features: [
+                      "Predictive forecasting",
+                      "Executive & departmental dashboards",
+                      "Multi‑location/language reporting",
+                      "ERP/data warehouse integrations",
+                    ],
+                  },
                 ]}
               />
             </div>

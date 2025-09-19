@@ -5,10 +5,18 @@ import GlowCard from "./GlowCard";
 import { cn } from "@/lib/utils";
 import { StarBorder } from "@/components/ui/star-border";
 
-type ServiceCardProps = {
-  title: string;
+type TierKey = "basic" | "smart" | "full";
+
+type Tier = {
+  key: TierKey;
+  label: string;
   tagline?: string;
   features?: string[];
+};
+
+type ServiceCardProps = {
+  title: string;
+  tiers: Tier[]; // must be in order basic -> smart -> full
   accent?: string; // hex color
   ctaHref?: string;
   className?: string;
@@ -17,13 +25,14 @@ type ServiceCardProps = {
 
 export default function ServiceCard({
   title,
-  tagline,
-  features = [],
+  tiers,
   accent = "#00cad1",
   ctaHref = "#contact",
   className,
   icon,
 }: ServiceCardProps) {
+  const [active, setActive] = React.useState<TierKey>(tiers[0]?.key || "basic");
+  const activeTier = tiers.find(t => t.key === active) || tiers[0];
   return (
     <GlowCard accentColor={accent} className={className}>
       <div className="p-6">
@@ -45,15 +54,38 @@ export default function ServiceCard({
           )}
         </div>
 
-        {tagline && <p className="mt-3 text-sm text-white/90">{tagline}</p>}
+        {/* Tier tabs */}
+        <div className="mt-4 grid grid-cols-3 rounded-lg ring-1 ring-white/10 overflow-hidden">
+          {tiers.map((t) => {
+            const isActive = active === t.key;
+            return (
+              <button
+                key={t.key}
+                onClick={() => setActive(t.key)}
+                className={cn(
+                  "px-3 py-2 text-xs font-semibold uppercase tracking-wide transition-colors",
+                  isActive
+                    ? "bg-white/10 text-white"
+                    : "bg-background/40 text-white/70 hover:text-white"
+                )}
+                style={{ borderRight: "1px solid rgba(255,255,255,0.08)" }}
+                aria-pressed={isActive}
+              >
+                {t.label}
+              </button>
+            );
+          })}
+        </div>
 
-        {features.length > 0 && (
+        {activeTier?.tagline && <p className="mt-3 text-sm text-white/90">{activeTier.tagline}</p>}
+
+        {activeTier?.features?.length ? (
           <ul className="mt-4 space-y-2 text-sm text-white/80 list-disc list-inside">
-            {features.map((f, i) => (
+            {activeTier.features.map((f, i) => (
               <li key={i}>{f}</li>
             ))}
           </ul>
-        )}
+        ) : null}
 
         <div className="mt-6">
           <StarBorder as="a" href={ctaHref} className="w-full text-center">
