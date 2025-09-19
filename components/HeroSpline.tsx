@@ -50,8 +50,8 @@ export default function HeroSpline({ scene, className, style }: Props) {
   useEffect(() => {
     if (!inView || !containerRef.current) return;
     setIsLoaded(false);
-    const el = containerRef.current.querySelector("spline-viewer") as (Element & { addEventListener?: any; removeEventListener?: any }) | null;
-    const handleLoad = () => setIsLoaded(true);
+    const el = containerRef.current.querySelector("spline-viewer") as Element | null;
+    const handleLoad: EventListener = () => setIsLoaded(true);
     el?.addEventListener?.("load", handleLoad, { once: true });
     const failSafe = window.setTimeout(() => setIsLoaded(true), 8000);
     return () => {
