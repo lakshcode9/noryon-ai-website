@@ -41,7 +41,7 @@ export default function Home() {
         {/* Background Spline in top-right, free-floating without borders */}
         <div aria-hidden className="absolute inset-y-0 right-0 w-[55%] max-w-[48rem] z-0 spline-mix will-change-transform">
           <HeroSpline
-            scene="https://prod.spline.design/KAINVqb7zStDrlph/scene.splinecode"
+            scene="https://prod.spline.design/czRKzd-MFaaJMpVz/scene.splinecode"
             style={{ filter: "var(--spline-filter, none)" }}
           />
         </div>
