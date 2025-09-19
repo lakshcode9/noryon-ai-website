@@ -3,6 +3,7 @@ import ThemeToggle from "../components/ThemeToggle";
 import MobileNav from "../components/MobileNav";
 import Image from "next/image";
 import ServiceTabs from "../components/ui/ServiceTabs";
+import Script from "next/script";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
           <nav className="hidden md:flex items-center gap-6 text-sm text-white/80">
             <a href="#services" className="hover:text-white transition-colors">Services</a>
             <a href="#work" className="hover:text-white transition-colors">Work</a>
+            <a href="#book" className="hover:text-white transition-colors">Book</a>
             <a href="#contact" className="hover:text-white transition-colors">Contact</a>
           </nav>
           <div className="flex items-center gap-3">
@@ -66,6 +68,12 @@ export default function Home() {
                 className="pointer-events-auto inline-flex items-center justify-center rounded-md bg-secondary ring-1 ring-white/10 px-5 py-3 text-sm font-medium text-white/90 hover:bg-white/10 transition-colors w-full sm:w-auto"
               >
                 See capabilities
+              </a>
+              <a
+                href="#book"
+                className="pointer-events-auto inline-flex items-center justify-center rounded-md bg-[#0584af] px-5 py-3 text-sm font-medium text-white shadow-[0_0_35px_12px_rgba(5,132,175,0.25)] hover:bg-[#00cad1] transition-colors w-full sm:w-auto"
+              >
+                Book a call
               </a>
             </div>
           </div>
@@ -442,6 +450,25 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Book a Call (Calendly) */}
+      <section id="book" className="relative border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 md:py-24">
+          <div className="mb-8">
+            <p className="font-mono text-accent/90 text-xs tracking-[0.35em] uppercase mb-4">Book</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold">Schedule a strategy call</h2>
+            <p className="mt-4 text-white/90">Pick a time that works for you — no back and forth.</p>
+          </div>
+          <div className="rounded-xl bg-secondary ring-1 ring-white/10 p-2">
+            <div
+              className="calendly-inline-widget rounded-lg"
+              data-url="https://calendly.com/shauncere/noryon-strategy-call"
+              style={{ minWidth: "320px", height: "720px" }}
+            />
+          </div>
+        </div>
+        <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
       </section>
 
       {/* Footer */}
