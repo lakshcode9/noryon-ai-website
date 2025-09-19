@@ -3,6 +3,7 @@ import ThemeToggle from "../components/ThemeToggle";
 import MobileNav from "../components/MobileNav";
 import Image from "next/image";
 import ServiceTabs from "../components/ui/ServiceTabs";
+import { StarBorder } from "@/components/ui/star-border";
 import Script from "next/script";
 
 export default function Home() {
@@ -23,9 +24,9 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <MobileNav />
             <ThemeToggle />
-            <a href="#contact" className="inline-flex items-center rounded-md bg-[#04a8ae] px-4 py-2 text-sm font-medium text-white shadow-[0_0_25px_8px_rgba(0,200,207,0.35)] hover:bg-[#00cad1] transition-colors">
-            Start a project
-            </a>
+            <StarBorder as="a" href="#contact" className="pointer-events-auto">
+              Start a project
+            </StarBorder>
           </div>
         </div>
       </header>
@@ -66,24 +67,15 @@ export default function Home() {
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
-              <a
-                href="#contact"
-                className="pointer-events-auto inline-flex items-center justify-center rounded-md bg-[#04a8ae] px-5 py-3 text-sm font-medium text-white shadow-[0_0_35px_12px_rgba(0,200,207,0.25)] hover:bg-[#00cad1] transition-colors w-full sm:w-auto"
-              >
+              <StarBorder as="a" href="#contact" className="pointer-events-auto w-full sm:w-auto text-center">
                 Get a proposal
-              </a>
-              <a
-                href="#services"
-                className="pointer-events-auto inline-flex items-center justify-center rounded-md bg-secondary ring-1 ring-white/10 px-5 py-3 text-sm font-medium text-white/90 hover:bg-white/10 transition-colors w-full sm:w-auto"
-              >
+              </StarBorder>
+              <StarBorder as="a" href="#services" className="pointer-events-auto w-full sm:w-auto text-center">
                 See capabilities
-              </a>
-              <a
-                href="#book"
-                className="pointer-events-auto inline-flex items-center justify-center rounded-md bg-[#0584af] px-5 py-3 text-sm font-medium text-white shadow-[0_0_35px_12px_rgba(5,132,175,0.25)] hover:bg-[#00cad1] transition-colors w-full sm:w-auto"
-              >
+              </StarBorder>
+              <StarBorder as="a" href="#book" className="pointer-events-auto w-full sm:w-auto text-center">
                 Book a call
-              </a>
+              </StarBorder>
             </div>
           </div>
           <div />
@@ -374,7 +366,7 @@ export default function Home() {
           </div>
 
           <div className="mt-10">
-            <a href="#contact" className="inline-flex items-center rounded-md bg-[#04a8ae] px-5 py-3 text-sm font-medium text-white shadow-[0_0_35px_12px_rgba(0,200,207,0.25)] hover:bg-[#00cad1] transition-colors">Get a proposal</a>
+            <StarBorder as="a" href="#contact">Get a proposal</StarBorder>
           </div>
         </div>
       </section>
@@ -435,7 +427,7 @@ export default function Home() {
                 <label className="block text-sm text-white/80 mb-1">What do you want to automate?</label>
                 <textarea className="w-full min-h-28 rounded-md bg-secondary ring-1 ring-white/10 px-3 py-2 text-sm placeholder:text-white/60 focus:outline-none focus:ring-[rgba(0,202,209,0.4)]" placeholder="Short description" name="message" />
               </div>
-              <button type="submit" className="inline-flex items-center rounded-md bg-[#04a8ae] px-5 py-3 text-sm font-medium text-white shadow-[0_0_35px_12px_rgba(0,200,207,0.25)] hover:bg-[#00cad1] transition-colors">Send email</button>
+              <StarBorder as="button" type="submit">Send email</StarBorder>
             </form>
 
             <div className="rounded-xl bg-secondary ring-1 ring-white/10 p-6">
@@ -453,8 +445,8 @@ export default function Home() {
                   <div className="text-white">Montreal, QC, Canada</div>
                 </div>
               </div>
-              <div className="mt-6">
-                <a href="#services" className="inline-flex items-center rounded-md bg-secondary ring-1 ring-white/10 px-4 py-2 text-sm font-medium text-white/90 hover:bg-white/10 transition-colors">See services</a>
+            <div className="mt-6">
+                <StarBorder as="a" href="#services">See services</StarBorder>
               </div>
             </div>
           </div>
