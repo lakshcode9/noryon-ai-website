@@ -45,14 +45,9 @@ export default function Home() {
             scene="https://prod.spline.design/czRKzd-MFaaJMpVz/scene.splinecode"
             style={{ filter: "var(--spline-filter, none)", transform: "translateX(40%) scale(1.2)", transformOrigin: "right center" }}
           />
-          {/* Darker vertical gradient to hide the leg seam precisely */}
-          <div 
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              // Start fade around where the legs end (~58% of hero height)
-              background: "linear-gradient(to bottom, rgba(32,38,54,0) 0%, rgba(32,38,54,0) 58%, rgba(19,22,31,0.88) 68%, rgba(19,22,31,1) 100%)",
-              mask: "linear-gradient(to right, transparent 0%, black 38%, black 100%)"
-            }}
+          {/* Solid bottom overlay to cover the leg seam exactly */}
+          <div
+            className="absolute bottom-0 left-0 right-0 h-[18vh] md:h-[20vh] lg:h-[22vh] bg-background opacity-95 pointer-events-none z-[1]"
           />
         </div>
 
