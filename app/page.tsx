@@ -49,11 +49,11 @@ export default function Home() {
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center pointer-events-none">
           <div className="text-center lg:text-left">
             <p className="font-mono text-accent/90 text-xs tracking-[0.35em] uppercase mb-5">AI Automation Agency</p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight uppercase">
-              Build once. Automate everything. Grow while you sleep.
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight">
+              Future-Proof Your Business with AI Automation.
             </h1>
             <p className="mt-6 text-base sm:text-lg text-white/90">
-              We design, ship, and maintain end‑to‑end AI systems that automate ops, support, and growth. From agents to integrations—production‑ready, secure, and measurable.
+              We build custom AI agents and workflows that save you time, cut costs, and help you scale faster and smarter while you sleep.
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
