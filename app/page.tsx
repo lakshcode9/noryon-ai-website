@@ -44,6 +44,14 @@ export default function Home() {
             scene="https://prod.spline.design/czRKzd-MFaaJMpVz/scene.splinecode"
             style={{ filter: "var(--spline-filter, none)", transform: "translateX(40%) scale(1.2)", transformOrigin: "right center" }}
           />
+          {/* Blue gradient overlay to mask robot line and blend legs */}
+          <div 
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: "linear-gradient(135deg, transparent 0%, transparent 40%, rgba(32,38,54,0.3) 60%, rgba(32,38,54,0.8) 80%, rgba(32,38,54,1) 100%)",
+              mask: "linear-gradient(to right, transparent 0%, black 40%, black 100%)"
+            }}
+          />
         </div>
 
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center pointer-events-none">
