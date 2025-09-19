@@ -44,12 +44,13 @@ export default function Home() {
             scene="https://prod.spline.design/czRKzd-MFaaJMpVz/scene.splinecode"
             style={{ filter: "var(--spline-filter, none)", transform: "translateX(40%) scale(1.2)", transformOrigin: "right center" }}
           />
-          {/* Blue gradient overlay to mask robot line and blend legs */}
+          {/* Darker vertical gradient to hide the leg seam precisely */}
           <div 
             className="absolute inset-0 pointer-events-none"
             style={{
-              background: "linear-gradient(135deg, transparent 0%, transparent 40%, rgba(32,38,54,0.3) 60%, rgba(32,38,54,0.8) 80%, rgba(32,38,54,1) 100%)",
-              mask: "linear-gradient(to right, transparent 0%, black 40%, black 100%)"
+              // Start fade around where the legs end (~58% of hero height)
+              background: "linear-gradient(to bottom, rgba(32,38,54,0) 0%, rgba(32,38,54,0) 58%, rgba(19,22,31,0.88) 68%, rgba(19,22,31,1) 100%)",
+              mask: "linear-gradient(to right, transparent 0%, black 38%, black 100%)"
             }}
           />
         </div>
