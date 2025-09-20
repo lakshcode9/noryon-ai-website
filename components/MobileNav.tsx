@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useId, useState } from "react";
+import { StarBorder } from "./ui/star-border";
+import ThemeToggle from "./ThemeToggle";
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -45,7 +47,14 @@ export default function MobileNav() {
               <a href="#services" onClick={() => setOpen(false)} className="rounded-md hover:bg-white/10 px-3 py-2 transition-colors">Services</a>
               <a href="#work" onClick={() => setOpen(false)} className="rounded-md hover:bg-white/10 px-3 py-2 transition-colors">Work</a>
               <a href="#contact" onClick={() => setOpen(false)} className="rounded-md hover:bg-white/10 px-3 py-2 transition-colors">Contact</a>
+              <a href="#book" onClick={() => setOpen(false)} className="rounded-md hover:bg-white/10 px-3 py-2 transition-colors">Book a call</a>
             </nav>
+            <div className="mt-4 pt-4 border-t border-white/10 flex flex-col items-center gap-4">
+              <StarBorder as="a" href="#contact" onClick={() => setOpen(false)} className="w-full text-center">
+                Start a project
+              </StarBorder>
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       )}

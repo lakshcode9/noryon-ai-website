@@ -16,18 +16,25 @@ export default function Home() {
             <Image src="/@favicon.png" alt="Noryon" width={24} height={24} className="h-6 w-6" />
             <span className="font-mono text-sm tracking-widest uppercase text-accent">Noryon</span>
           </div>
+
+          {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-6 text-sm text-white/80">
             <a href="#services" className="hover:text-white transition-colors">Services</a>
             <a href="#work" className="hover:text-white transition-colors">Work</a>
             <a href="#contact" className="hover:text-white transition-colors">Contact</a>
             <a href="#book" className="hover:text-white transition-colors">Book</a>
           </nav>
+
           <div className="flex items-center gap-3">
+            {/* Mobile Nav */}
             <MobileNav />
-            <ThemeToggle />
-            <StarBorder as="a" href="#contact" className="pointer-events-auto">
-              Start a project
-            </StarBorder>
+            {/* Desktop-only items */}
+            <div className="hidden md:flex items-center gap-3">
+              <ThemeToggle />
+              <StarBorder as="a" href="#contact" className="pointer-events-auto">
+                Start a project
+              </StarBorder>
+            </div>
           </div>
         </div>
       </header>
@@ -41,7 +48,7 @@ export default function Home() {
 
       <section className="relative mx-auto max-w-7xl px-6 py-16 sm:py-20 md:py-24">
         {/* Background Spline positioned at extreme right */}
-        <div aria-hidden className="absolute inset-y-0 right-0 w-[100vw] z-0 spline-mix will-change-transform">
+        <div aria-hidden className="hidden lg:block absolute inset-y-0 right-0 w-[100vw] z-0 spline-mix will-change-transform">
           <HeroSpline
             scene="https://prod.spline.design/czRKzd-MFaaJMpVz/scene.splinecode"
             style={{ filter: "var(--spline-filter, none)", transform: "translateX(40%) scale(1.2)", transformOrigin: "right center" }}
