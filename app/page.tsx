@@ -6,6 +6,7 @@ import ServiceCard from "@/components/ui/ServiceCard";
 import { StarBorder } from "@/components/ui/star-border";
 import Script from "next/script";
 import TestimonialStackDemo from "@/components/ui/testimonial-demo";
+import DemoThreeDTestimonials from "@/components/ui/three-d-testimonials-demo";
 
 export default function Home() {
   return (
@@ -310,7 +311,10 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold">Recent outcomes</h2>
             <p className="mt-4 text-white/90">Swipe through wins from real client deployments.</p>
           </div>
-          <TestimonialStackDemo />
+          <div className="mx-auto flex flex-col items-center gap-12">
+            <TestimonialStackDemo />
+            <DemoThreeDTestimonials />
+          </div>
         </div>
       </section>
 
