@@ -133,7 +133,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ position, testimonial
         "absolute left-1/2 top-1/2 cursor-pointer border-2 p-8 transition-all duration-500 ease-in-out will-change-transform",
         isCenter
           ? "z-10 bg-primary text-primary-foreground border-primary"
-          : "z-0 bg-accent/90 text-white border-accent/40 hover:border-primary/60",
+            : "z-0 bg-muted/80 text-foreground border-muted/60 hover:border-primary/60",
       )}
       style={{
         width: cardSize,

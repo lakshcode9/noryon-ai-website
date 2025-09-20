@@ -9,7 +9,7 @@ import StaggerTestimonials from "@/components/ui/stagger-testimonials";
 
 export default function Home() {
   return (
-    <main className="min-h-dvh bg-background text-foreground relative overflow-hidden shiny-blue">
+    <main className="min-h-dvh bg-background text-foreground relative overflow-x-hidden shiny-blue">
       <header className="w-full sticky top-0 z-20 border-b border-white/10 bg-[#20263699]">
         <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2 select-none">
