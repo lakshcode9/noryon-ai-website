@@ -1,87 +1,89 @@
 "use client";
 
 import React from "react";
-import { Users, Calendar, ThumbsUp, ShieldCheck, Clock, Share, Rocket, Zap, Gem } from "lucide-react";
+import { Users, Calendar, ThumbsUp, ShieldCheck, Clock, Share, Rocket, Zap, Gem, MessageSquare, Headset, BarChart3 } from "lucide-react";
 import { TestimonialStack, Testimonial } from "@/components/ui/glass-testimonial-swiper";
 
 const testimonialsData: Testimonial[] = [
   {
     id: 1,
-    initials: "SM",
-    name: "Sarah Mitchell",
-    role: "VP of Engineering at TechFlow",
+    initials: "CS",
+    name: "Ops Lead, Retail Brand",
+    role: "Inbound Support Automation",
     quote:
-      "This platform has completely transformed how our team collaborates. The AI-powered analytics provide insights we never had before, and the performance improvements are remarkable. Best investment we've made this year.",
+      "Our chatbot deflects 62% of tickets while CSAT is up 18%. Customers get instant answers, and my team focuses on the hard stuff.",
     tags: [
       { text: "FEATURED", type: "featured" },
-      { text: "Enterprise", type: "default" },
+      { text: "LangGraph • RAG • WhatsApp", type: "default" },
     ],
     stats: [
-      { icon: Users, text: "200+ team" },
-      { icon: Calendar, text: "2 years customer" },
+      { icon: MessageSquare, text: "62% deflection" },
+      { icon: ThumbsUp, text: "+18% CSAT" },
     ],
     avatarGradient: "linear-gradient(135deg, #5e6ad2, #8b5cf6)",
   },
   {
     id: 2,
-    initials: "MC",
-    name: "Marcus Chen",
-    role: "Product Manager at DataSync",
+    initials: "VA",
+    name: "Clinic Manager",
+    role: "Voice Booking Agent",
     quote:
-      "The real-time collaboration features are game-changing. Our remote team feels more connected than ever, and the platform's reliability is outstanding. The mobile experience is seamless across all devices.",
+      "After-hours bookings grew 35%. The agent books, takes deposits, and speaks our patients’ language — literally.",
     tags: [
-      { text: "Startup", type: "default" },
-      { text: "Mobile", type: "default" },
+      { text: "Twilio • Calendars • Stripe", type: "default" },
     ],
     stats: [
-      { icon: ThumbsUp, text: "Helpful" },
-      { icon: ShieldCheck, text: "Verified" },
+      { icon: Headset, text: "+35% after-hours" },
+      { icon: ShieldCheck, text: "PCI ready" },
     ],
     avatarGradient: "linear-gradient(135deg, #10b981, #059669)",
   },
   {
     id: 3,
-    initials: "AR",
-    name: "Alex Rodriguez",
-    role: "CTO at StartupFlow",
+    initials: "BO",
+    name: "Ops Director, B2B SaaS",
+    role: "Back‑Office Automations",
     quote:
-      "Incredible performance boost and the mobile apps are flawless. Support team is responsive and the feature roadmap aligns perfectly with our needs. The customization options are endless.",
+      "We recovered ~40 hours every week through CRM syncs, invoicing, and reporting. It just runs in the background.",
     tags: [
-      { text: "Enterprise", type: "default" },
-      { text: "API User", type: "default" },
+      { text: "HubSpot • Sheets • Make/Zapier", type: "default" },
     ],
     stats: [
-      { icon: Clock, text: "6 months ago" },
-      { icon: Share, text: "Shared 8 times" },
+      { icon: Clock, text: "~40 hrs saved/wk" },
+      { icon: Share, text: "Data unified" },
     ],
     avatarGradient: "linear-gradient(135deg, #f59e0b, #d97706)",
   },
   {
     id: 4,
-    initials: "EJ",
-    name: "Emily Johnson",
-    role: "Founder of Innovate Inc.",
+    initials: "RR",
+    name: "Marketing Lead, Multi‑location",
+    role: "Review & Reputation",
     quote:
-      "As a new company, speed is everything. This tool allowed us to scale our operations twice as fast without doubling our headcount. A must-have for any ambitious startup.",
+      "Reviews tripled and our average rating climbed by 1.2 stars in 8 weeks. Negative feedback gets routed privately.",
     tags: [
-      { text: "New", type: "default" },
-      { text: "Growth", type: "featured" },
+      { text: "Google • Facebook • Yelp", type: "default" },
     ],
     stats: [
-      { icon: Rocket, text: "Scaled 2x" },
-      { icon: Zap, text: "Fast Setup" },
+      { icon: Rocket, text: "3x review volume" },
+      { icon: Zap, text: "+1.2★ rating" },
     ],
     avatarGradient: "linear-gradient(135deg, #ec4899, #d946ef)",
   },
   {
     id: 5,
-    initials: "DW",
-    name: "David Wong",
-    role: "Lead Designer at Creative Co.",
+    initials: "AR",
+    name: "COO, Marketplace",
+    role: "Analytics & Reporting",
     quote:
-      "The user interface is not just beautiful, it's intuitive. Our design team was able to adopt it instantly, streamlining our entire workflow and improving creative output.",
-    tags: [{ text: "Design", type: "default" }],
-    stats: [{ icon: Gem, text: "Top UI/UX" }],
+      "Leaders finally get one dashboard that answers ‘how are we doing?’ AI highlights trends and sends weekly summaries.",
+    tags: [
+      { text: "CRM • Ads • Bookings • Web", type: "default" },
+    ],
+    stats: [
+      { icon: BarChart3, text: "Exec dashboards" },
+      { icon: Gem, text: "Forecasting" },
+    ],
     avatarGradient: "linear-gradient(135deg, #3b82f6, #6366f1)",
   },
 ];
