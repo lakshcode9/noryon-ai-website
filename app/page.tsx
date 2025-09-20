@@ -306,13 +306,15 @@ export default function Home() {
       {/* Work */}
       <section id="work" className="relative border-t border-white/10">
         <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 md:py-24">
-          <div className="mb-10 sm:mb-12 md:mb-16 text-center">
+          <div className="mb-16 sm:mb-20 md:mb-24 text-center">
             <p className="font-mono text-accent/90 text-xs tracking-[0.35em] uppercase mb-4">Work</p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold">Recent outcomes</h2>
             <p className="mt-4 text-white/90">Swipe through wins and capabilities powered by our automation stack.</p>
           </div>
 
-          <StaggerTestimonials />
+          <div className="mt-8">
+            <StaggerTestimonials />
+          </div>
         </div>
       </section>
 
