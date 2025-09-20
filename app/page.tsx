@@ -5,6 +5,7 @@ import Image from "next/image";
 import ServiceCard from "@/components/ui/ServiceCard";
 import { StarBorder } from "@/components/ui/star-border";
 import Script from "next/script";
+import { TestimonialsSection } from "@/components/ui/testimonials-with-marquee";
 
 export default function Home() {
   return (
@@ -301,9 +302,78 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Work / Testimonials */}
+      <section id="work" className="relative border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 md:py-24">
+          <TestimonialsSection
+            title="What clients achieve with Noryon"
+            description="Real outcomes from AI chatbots, voice agents, automations, analytics, and reputation systems."
+            testimonials={[
+              {
+                author: {
+                  name: "Chatbot Services · Basic",
+                  handle: "24/7 FAQ + lead capture",
+                  avatar:
+                    "https://images.unsplash.com/photo-1526045478516-99145907023c?w=150&h=150&fit=crop&crop=face",
+                },
+                text:
+                  "A simple AI assistant that answers FAQs and captures leads so you never miss an opportunity.",
+              },
+              {
+                author: {
+                  name: "Chatbot Services · Smart",
+                  handle: "Booking + payments",
+                  avatar:
+                    "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=150&h=150&fit=crop&crop=face",
+                },
+                text:
+                  "Books appointments, logs leads in your CRM and takes deposits in one flow.",
+              },
+              {
+                author: {
+                  name: "Chatbot Services · Full AI",
+                  handle: "Omnichannel + analytics",
+                  avatar:
+                    "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=150&h=150&fit=crop&crop=face",
+                },
+                text:
+                  "Advanced AI with memory across Instagram, Messenger, WhatsApp and more — compliance ready.",
+              },
+              {
+                author: {
+                  name: "Voice AI · Basic",
+                  handle: "Answer every call",
+                  avatar:
+                    "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?w=150&h=150&fit=crop&crop=face",
+                },
+                text:
+                  "Professional voice that answers, routes and captures leads around the clock.",
+              },
+              {
+                author: {
+                  name: "Automation · Smart",
+                  handle: "CRM + payments + workflows",
+                  avatar:
+                    "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=150&h=150&fit=crop&crop=face",
+                },
+                text:
+                  "Connects your tools, automates multi‑step tasks and adds a performance dashboard.",
+              },
+              {
+                author: {
+                  name: "Reputation · Smart",
+                  handle: "Grow reviews, filter negatives",
+                  avatar:
+                    "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=150&h=150&fit=crop&crop=face",
+                },
+                text:
+                  "Automated review requests and a trends dashboard to protect and grow your brand.",
+              },
+            ]}
+          />
+        </div>
+      </section>
 
-
- 
       {/* Contact */}
       <section id="contact" className="relative border-t border-white/10">
         <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 md:py-24">
