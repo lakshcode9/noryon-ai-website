@@ -130,7 +130,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ position, testimonial
     <div
       onClick={() => handleMove(position)}
       className={cn(
-        "absolute left-1/2 top-1/2 cursor-pointer border-2 p-8 transition-all duration-500 ease-in-out",
+        "absolute left-1/2 top-1/2 cursor-pointer border-2 p-8 transition-all duration-500 ease-in-out will-change-transform",
         isCenter ? "z-10 bg-primary text-primary-foreground border-primary" : "z-0 bg-card text-card-foreground border-border hover:border-primary/50",
       )}
       style={{
@@ -141,7 +141,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ position, testimonial
         boxShadow: isCenter ? "0px 8px 0px 4px hsl(var(--border))" : "0px 0px 0px 0px transparent",
       }}
     >
-      <span className="absolute block origin-top-right rotate-45 bg-border" style={{ right: -2, top: 48, width: SQRT_5000, height: 2 }} />
+      <span className="pointer-events-none absolute block origin-top-right rotate-45 bg-border" style={{ right: -2, top: 48, width: SQRT_5000, height: 2 }} />
       <Image
         src={testimonial.imgSrc}
         alt={testimonial.by}
@@ -189,7 +189,7 @@ export const StaggerTestimonials: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden bg-secondary" style={{ height: 600 }}>
+    <div className="relative w-full bg-secondary/60 rounded-lg overflow-visible pt-24 pb-20" style={{ height: 600 }}>
       {testimonialsList.map((testimonial, index) => {
         const position = testimonialsList.length % 2 ? index - (testimonialsList.length + 1) / 2 : index - testimonialsList.length / 2;
         return (
