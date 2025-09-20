@@ -83,7 +83,6 @@ export const TestimonialStack = ({ testimonials, visibleBehind = 2 }: Testimonia
   return (
     <section className="testimonials-stack relative pb-10">
       {testimonials.map((testimonial, index) => {
-        const isActive = index === activeIndex;
         // Calculate the card's position in the display order
         const displayOrder = (index - activeIndex + totalCards) % totalCards;
 
@@ -140,7 +139,7 @@ export const TestimonialStack = ({ testimonials, visibleBehind = 2 }: Testimonia
                 </div>
               </div>
 
-              <blockquote className="text-card-foreground/90 leading-relaxed text-lg mb-6">"{testimonial.quote}"</blockquote>
+              <blockquote className="text-card-foreground/90 leading-relaxed text-lg mb-6">“{testimonial.quote}”</blockquote>
 
               <div className="flex flex-col md:flex-row items-start md:items-center justify-between border-t border-border pt-4 gap-4">
                 <div className="flex flex-wrap gap-2">

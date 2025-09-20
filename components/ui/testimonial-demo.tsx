@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Users, Calendar, ThumbsUp, ShieldCheck, Clock, Share, Rocket, Zap, Gem, MessageSquare, Headset, BarChart3 } from "lucide-react";
+import { ThumbsUp, ShieldCheck, Clock, Share, Rocket, Zap, Gem, MessageSquare, Headset, BarChart3 } from "lucide-react";
 import { TestimonialStack, Testimonial } from "@/components/ui/glass-testimonial-swiper";
 
 const testimonialsData: Testimonial[] = [
