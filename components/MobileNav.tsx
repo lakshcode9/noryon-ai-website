@@ -39,7 +39,7 @@ export default function MobileNav() {
           <div className="absolute inset-0 bg-[#202636]/80 backdrop-blur-sm" onClick={() => setOpen(false)} />
           <div
             id={id}
-            className="absolute right-4 top-16 w-[min(90vw,320px)] rounded-xl bg-secondary ring-1 ring-white/10 p-4 text-sm text-white shadow-xl"
+            className="absolute right-4 top-16 w-[min(90vw,320px)] max-h-[calc(100dvh-100px)] overflow-auto rounded-xl bg-secondary ring-1 ring-white/10 p-4 text-sm text-white shadow-xl animate-in fade-in-20 slide-in-from-top-4"
           >
             <nav className="flex flex-col gap-2">
               <a href="#services" onClick={() => setOpen(false)} className="rounded-md hover:bg-white/10 px-3 py-2 transition-colors">Services</a>

@@ -33,9 +33,9 @@ export default function Home() {
       </header>
 
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-40 left-1/2 h-[50rem] w-[50rem] -translate-x-1/2 rounded-full bg-[#04a8ae33]" />
-        <div className="absolute top-40 right-1/4 h-96 w-96 rounded-full bg-[#00c8cf33]" />
-        <div className="absolute bottom-10 left-1/5 h-72 w-72 rounded-full bg-[#0584af33]" />
+        <div className="absolute -top-40 left-1/2 h-[50rem] w-[25rem] -translate-x-1/2 rounded-full bg-[#04a8ae33] sm:w-[50rem]" />
+        <div className="absolute top-40 right-1/4 h-96 w-48 rounded-full bg-[#00c8cf33] sm:w-96" />
+        <div className="absolute bottom-10 left-1/5 h-72 w-36 rounded-full bg-[#0584af33] sm:w-72" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(5,132,175,0.08),transparent_60%)]" />
       </div>
 

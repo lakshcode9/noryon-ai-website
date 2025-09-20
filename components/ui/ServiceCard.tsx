@@ -55,7 +55,7 @@ export default function ServiceCard({
         </div>
 
         {/* Tier tabs */}
-        <div className="mt-4 grid grid-cols-3 rounded-lg ring-1 ring-white/10 overflow-hidden">
+        <div className="mt-4 flex flex-wrap gap-2">
           {tiers.map((t) => {
             const isActive = active === t.key;
             return (
@@ -63,12 +63,11 @@ export default function ServiceCard({
                 key={t.key}
                 onClick={() => setActive(t.key)}
                 className={cn(
-                  "px-3 py-2 text-xs font-semibold uppercase tracking-wide transition-colors",
+                  "flex-1 rounded-md px-3 py-2 text-xs font-semibold uppercase tracking-wide transition-colors",
                   isActive
                     ? "bg-white/10 text-white"
                     : "bg-background/40 text-white/70 hover:text-white"
                 )}
-                style={{ borderRight: "1px solid rgba(255,255,255,0.08)" }}
                 aria-pressed={isActive}
               >
                 {t.label}
