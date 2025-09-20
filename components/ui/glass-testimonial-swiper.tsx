@@ -108,13 +108,16 @@ export const TestimonialStack = ({ testimonials, visibleBehind = 2 }: Testimonia
           style.zIndex = 0;
         }
 
-        const tagClasses = (type: "featured" | "default")
-          ? "bg-primary/20 text-primary border border-primary/30"
-          : "bg-secondary text-secondary-foreground";
+        const tagClasses = (type: "featured" | "default") =>
+          type === "featured"
+            ? "bg-primary/20 text-primary border border-primary/30"
+            : "bg-secondary text-secondary-foreground";
 
         return (
           <div
-            ref={(el) => (cardRefs.current[index] = el)}
+            ref={(el) => {
+              cardRefs.current[index] = el;
+            }}
             key={testimonial.id}
             className="testimonial-card glass-effect backdrop-blur-xl"
             style={style}
@@ -142,7 +145,7 @@ export const TestimonialStack = ({ testimonials, visibleBehind = 2 }: Testimonia
               <div className="flex flex-col md:flex-row items-start md:items-center justify-between border-t border-border pt-4 gap-4">
                 <div className="flex flex-wrap gap-2">
                   {testimonial.tags.map((tag, i) => (
-                    <span key={i} className={["text-xs", "px-2", "py-1", "rounded-md", tag.type === "featured" ? "bg-primary/20 text-primary border border-primary/30" : "bg-secondary text-secondary-foreground"].join(" ")}>
+                    <span key={i} className={["text-xs", "px-2", "py-1", "rounded-md", tagClasses(tag.type)].join(" ")}>
                       {tag.text}
                     </span>
                   ))}
