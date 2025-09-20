@@ -131,7 +131,9 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ position, testimonial
       onClick={() => handleMove(position)}
       className={cn(
         "absolute left-1/2 top-1/2 cursor-pointer border-2 p-8 transition-all duration-500 ease-in-out will-change-transform",
-        isCenter ? "z-10 bg-primary text-primary-foreground border-primary" : "z-0 bg-card text-card-foreground border-border hover:border-primary/50",
+        isCenter
+          ? "z-10 bg-primary text-primary-foreground border-primary"
+          : "z-0 bg-accent/90 text-white border-accent/40 hover:border-primary/60",
       )}
       style={{
         width: cardSize,
