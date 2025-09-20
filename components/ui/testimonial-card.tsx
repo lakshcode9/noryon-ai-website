@@ -17,7 +17,7 @@ export interface TestimonialCardProps {
 }
 
 export function TestimonialCard({ author, text, href, className }: TestimonialCardProps) {
-  const Card: any = href ? "a" : "div";
+  const Card: React.ElementType = href ? "a" : "div";
 
   return (
     <Card
