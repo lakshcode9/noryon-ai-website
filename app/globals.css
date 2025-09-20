@@ -150,8 +150,8 @@
   .animate-star-movement-top { animation: star-movement-top linear infinite alternate; }
 }
 
-/* Marquee animations (Tailwind v4 inline theme) */
-@theme inline {
+/* Marquee animations - CSS custom properties */
+:root {
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
 }

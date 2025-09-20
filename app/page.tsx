@@ -5,8 +5,7 @@ import Image from "next/image";
 import ServiceCard from "@/components/ui/ServiceCard";
 import { StarBorder } from "@/components/ui/star-border";
 import Script from "next/script";
-import TestimonialStackDemo from "@/components/ui/testimonial-demo";
-import DemoThreeDTestimonials from "@/components/ui/three-d-testimonials-demo";
+import StaggerTestimonials from "@/components/ui/stagger-testimonials";
 
 export default function Home() {
   return (
@@ -303,21 +302,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Work / Case Studies - Glass Testimonial Stack */}
+
+      {/* Work */}
       <section id="work" className="relative border-t border-white/10">
         <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 md:py-24">
           <div className="mb-10 sm:mb-12 md:mb-16 text-center">
             <p className="font-mono text-accent/90 text-xs tracking-[0.35em] uppercase mb-4">Work</p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold">Recent outcomes</h2>
-            <p className="mt-4 text-white/90">Swipe through wins from real client deployments.</p>
+            <p className="mt-4 text-white/90">Swipe through wins and capabilities powered by our automation stack.</p>
           </div>
-          <div className="mx-auto flex flex-col items-center gap-12">
-            <TestimonialStackDemo />
-            <DemoThreeDTestimonials />
-          </div>
+
+          <StaggerTestimonials />
         </div>
       </section>
 
+ 
       {/* Contact */}
       <section id="contact" className="relative border-t border-white/10">
         <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 md:py-24">
