@@ -170,6 +170,43 @@
   }
 }
 
+/* Glass testimonial specific styles */
+.testimonials-stack {
+  perspective: 1200px;
+}
+.testimonial-card {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(720px, 96%);
+  border-radius: 1rem;
+  background: color-mix(in oklch, var(--card) 60%, transparent);
+  border: 1px solid var(--border);
+  box-shadow: 0 24px 60px -20px rgba(0,0,0,0.45);
+}
+.testimonial-card.glass-effect::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  pointer-events: none;
+}
+.testimonial-card.is-dragging {
+  cursor: grabbing;
+}
+.pagination-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: color-mix(in oklch, var(--foreground) 40%, transparent);
+  transition: all .2s ease;
+}
+.pagination-dot.active {
+  width: 22px;
+  background: var(--ring);
+}
+
 /* Opening splash animation (logo scale + glow + fade) */
 .splash-mask {
   animation: splashFade 2.2s ease forwards;

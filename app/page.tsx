@@ -5,6 +5,7 @@ import Image from "next/image";
 import ServiceCard from "@/components/ui/ServiceCard";
 import { StarBorder } from "@/components/ui/star-border";
 import Script from "next/script";
+import TestimonialStackDemo from "@/components/ui/testimonial-demo";
 
 export default function Home() {
   return (
@@ -301,31 +302,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Work / Case Studies */}
+      {/* Work / Case Studies - Glass Testimonial Stack */}
       <section id="work" className="relative border-t border-white/10">
         <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 md:py-24">
-          <div className="mb-10 sm:mb-12 md:mb-16">
+          <div className="mb-10 sm:mb-12 md:mb-16 text-center">
             <p className="font-mono text-accent/90 text-xs tracking-[0.35em] uppercase mb-4">Work</p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold">Recent outcomes</h2>
-            <p className="mt-4 text-white/90">A snapshot of measurable results we deliver with automation and AI.</p>
+            <p className="mt-4 text-white/90">Swipe through wins from real client deployments.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="rounded-xl bg-secondary ring-1 ring-white/10 p-6">
-              <h3 className="text-lg font-medium">Inbound support automation</h3>
-              <p className="mt-2 text-sm text-white/70">Deflected 62% tickets with a production chatbot. CSAT +18%.</p>
-              <div className="mt-4 text-xs text-white/60">Stack: LangGraph, RAG, WhatsApp API</div>
-            </div>
-            <div className="rounded-xl bg-secondary ring-1 ring-white/10 p-6">
-              <h3 className="text-lg font-medium">Voice booking agent</h3>
-              <p className="mt-2 text-sm text-white/70">Filled 35% more slots after‑hours with a multilingual agent.</p>
-              <div className="mt-4 text-xs text-white/60">Stack: Twilio, Calendars, Stripe</div>
-            </div>
-            <div className="rounded-xl bg-secondary ring-1 ring-white/10 p-6">
-              <h3 className="text-lg font-medium">Back‑office automations</h3>
-              <p className="mt-2 text-sm text-white/70">Saved ~40 hrs/week via CRM sync, invoices, and reporting.</p>
-              <div className="mt-4 text-xs text-white/60">Stack: HubSpot, Sheets, Make/Zapier</div>
-            </div>
-          </div>
+          <TestimonialStackDemo />
         </div>
       </section>
 
