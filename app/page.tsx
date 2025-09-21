@@ -11,14 +11,14 @@ export default function Home() {
   return (
     <main className="min-h-dvh bg-background text-foreground relative overflow-x-hidden shiny-blue">
       <header className="w-full sticky top-0 z-20 border-b border-white/10 bg-[#20263699]">
-        <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2 select-none">
-            <Image src="/@favicon.png" alt="Noryon" width={24} height={24} className="h-6 w-6" />
-            <span className="font-mono text-sm tracking-widest uppercase text-accent">Noryon</span>
+        <div className="mx-auto max-w-7xl px-6 py-5 flex items-center justify-between">
+          <div className="flex items-center gap-3 select-none">
+            <Image src="/@favicon.png" alt="Noryon" width={32} height={32} className="h-8 w-8" />
+            <span className="font-mono text-base tracking-widest uppercase text-accent">Noryon</span>
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-6 text-sm text-white/80">
+          <nav className="hidden md:flex items-center gap-8 text-base text-white/80">
             <a href="#services" className="hover:text-white transition-colors">Services</a>
             <a href="#work" className="hover:text-white transition-colors">Work</a>
             <a href="#contact" className="hover:text-white transition-colors">Contact</a>
@@ -31,7 +31,7 @@ export default function Home() {
             {/* Desktop-only items */}
             <div className="hidden md:flex items-center gap-3">
               <ThemeToggle />
-              <StarBorder as="a" href="#contact" className="pointer-events-auto">
+              <StarBorder as="a" href="#contact" className="pointer-events-auto" color="#00cad1">
                 Start a project
               </StarBorder>
             </div>
@@ -40,10 +40,7 @@ export default function Home() {
       </header>
 
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-40 left-1/2 h-[50rem] w-[25rem] -translate-x-1/2 rounded-full bg-[#04a8ae33] sm:w-[50rem]" />
-        <div className="absolute top-40 right-1/4 h-96 w-48 rounded-full bg-[#00c8cf33] sm:w-96" />
-        <div className="absolute bottom-10 left-1/5 h-72 w-36 rounded-full bg-[#0584af33] sm:w-72" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(5,132,175,0.08),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(0,202,209,0.3),transparent_90%)]" />
       </div>
 
       <section className="relative mx-auto max-w-7xl px-6 py-16 sm:py-20 md:py-24">
@@ -70,13 +67,13 @@ export default function Home() {
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
-              <StarBorder as="a" href="#contact" className="pointer-events-auto w-full sm:w-auto text-center">
+              <StarBorder as="a" href="#contact" className="pointer-events-auto w-full sm:w-auto text-center" color="#00cad1">
                 Get a proposal
               </StarBorder>
-              <StarBorder as="a" href="#services" className="pointer-events-auto w-full sm:w-auto text-center">
+              <StarBorder as="a" href="#services" className="pointer-events-auto w-full sm:w-auto text-center" color="#00cad1">
                 See capabilities
               </StarBorder>
-              <StarBorder as="a" href="#book" className="pointer-events-auto w-full sm:w-auto text-center">
+              <StarBorder as="a" href="#book" className="pointer-events-auto w-full sm:w-auto text-center" color="#00cad1">
                 Book a call
               </StarBorder>
             </div>
@@ -304,7 +301,7 @@ export default function Home() {
           </div>
 
           <div className="mt-10">
-            <StarBorder as="a" href="#contact">Get a proposal</StarBorder>
+            <StarBorder as="a" href="#contact" color="#00cad1">Get a proposal</StarBorder>
           </div>
         </div>
       </section>
@@ -399,17 +396,17 @@ export default function Home() {
             >
               <div>
                 <label className="block text-sm text-white/80 mb-1">Name</label>
-                <input className="w-full rounded-md bg-secondary ring-1 ring-white/10 px-3 py-2 text-sm placeholder:text-white/60 focus:outline-none focus:ring-[rgba(0,202,209,0.4)]" placeholder="Your name" name="name" required />
+                <input className="w-full rounded-md bg-secondary ring-1 ring-white/10 px-3 py-2 text-sm placeholder:text-white/60 focus:outline-none focus:ring-[rgba(0,202,209,0.4)]" placeholder="Your name" name="name" required suppressHydrationWarning />
               </div>
               <div>
                 <label className="block text-sm text-white/80 mb-1">Email</label>
-                <input type="email" className="w-full rounded-md bg-secondary ring-1 ring-white/10 px-3 py-2 text-sm placeholder:text-white/60 focus:outline-none focus:ring-[rgba(0,202,209,0.4)]" placeholder="you@company.com" name="email" required />
+                <input type="email" className="w-full rounded-md bg-secondary ring-1 ring-white/10 px-3 py-2 text-sm placeholder:text-white/60 focus:outline-none focus:ring-[rgba(0,202,209,0.4)]" placeholder="you@company.com" name="email" required suppressHydrationWarning />
               </div>
               <div>
                 <label className="block text-sm text-white/80 mb-1">What do you want to automate?</label>
-                <textarea className="w-full min-h-28 rounded-md bg-secondary ring-1 ring-white/10 px-3 py-2 text-sm placeholder:text-white/60 focus:outline-none focus:ring-[rgba(0,202,209,0.4)]" placeholder="Short description" name="message" />
+                <textarea className="w-full min-h-28 rounded-md bg-secondary ring-1 ring-white/10 px-3 py-2 text-sm placeholder:text-white/60 focus:outline-none focus:ring-[rgba(0,202,209,0.4)]" placeholder="Short description" name="message" suppressHydrationWarning />
               </div>
-              <StarBorder as="button" type="submit">Send email</StarBorder>
+              <StarBorder as="button" type="submit" color="#00cad1" suppressHydrationWarning>Send email</StarBorder>
             </form>
 
             <div className="rounded-xl bg-secondary ring-1 ring-white/10 p-6">
@@ -428,7 +425,7 @@ export default function Home() {
                 </div>
               </div>
             <div className="mt-6">
-                <StarBorder as="a" href="#services">See services</StarBorder>
+                <StarBorder as="a" href="#services" color="#00cad1">See services</StarBorder>
               </div>
             </div>
           </div>
@@ -459,7 +456,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 select-none">
             <Image src="/@favicon.png" alt="Noryon" width={20} height={20} className="h-5 w-5" />
-            <span className="font-mono text-xs tracking-widest uppercase text-accent">Noryon AI</span>
+            <span className="font-mono text-xs tracking-widest uppercase text-accent">Noryon</span>
           </div>
           <nav className="flex items-center gap-6 text-sm text-white/80">
             <a href="#services" className="hover:text-white transition-colors">Services</a>

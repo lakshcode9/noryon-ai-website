@@ -33,6 +33,13 @@ export default function ServiceCard({
 }: ServiceCardProps) {
   const [active, setActive] = React.useState<TierKey>(tiers[0]?.key || "basic");
   const activeTier = tiers.find(t => t.key === active) || tiers[0];
+  const [isMounted, setIsMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+
   return (
     <GlowCard accentColor={accent} className={className}>
       <div className="p-6">
@@ -58,6 +65,14 @@ export default function ServiceCard({
         <div className="mt-4 flex flex-wrap gap-2">
           {tiers.map((t) => {
             const isActive = active === t.key;
+            if (!isMounted) {
+              return (
+                <div
+                  key={t.key}
+                  className="flex-1 rounded-md px-3 py-2 text-xs font-semibold uppercase tracking-wide transition-colors bg-background/40 text-white/70"
+                />
+              );
+            }
             return (
               <button
                 key={t.key}
@@ -76,18 +91,21 @@ export default function ServiceCard({
           })}
         </div>
 
-        {activeTier?.tagline && <p className="mt-3 text-sm text-white/90">{activeTier.tagline}</p>}
+        {/* Spacer with min-height */}
+        <div className="min-h-48">
+          {activeTier?.tagline && <p className="mt-3 text-sm text-white/90">{activeTier.tagline}</p>}
 
-        {activeTier?.features?.length ? (
-          <ul className="mt-4 space-y-2 text-sm text-white/80 list-disc list-inside">
-            {activeTier.features.map((f, i) => (
-              <li key={i}>{f}</li>
-            ))}
-          </ul>
-        ) : null}
+          {activeTier?.features?.length ? (
+            <ul className="mt-4 space-y-2 text-sm text-white/80 list-disc list-inside">
+              {activeTier.features.map((f, i) => (
+                <li key={i}>{f}</li>
+              ))}
+            </ul>
+          ) : null}
+        </div>
 
         <div className="mt-6">
-          <StarBorder as="a" href={ctaHref} className="w-full text-center">
+          <StarBorder as="a" href={ctaHref} className="w-full text-center" color="#00cad1">
             Get this
           </StarBorder>
         </div>
