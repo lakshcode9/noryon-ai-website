@@ -10,6 +10,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import {use} from "react";
 import {setRequestLocale} from "next-intl/server";
 import ContactForm from "@/components/ContactForm";
+import CalendlyEmbed from "@/components/CalendlyEmbed";
 
 export default function Home({ params }: { params: Promise<{ locale: string }> }) {
   const {locale} = use(params);
@@ -219,6 +220,11 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
             <p className="mt-4 text-white/90">{t("booking.description")}</p>
           </div>
           {/* Calendly embed */}
+          <CalendlyEmbed 
+            url="https://calendly.com/shauncere/noryon-strategy-call"
+            className="w-full max-w-4xl mx-auto"
+            height="700px"
+          />
         </div>
       </section>
 
