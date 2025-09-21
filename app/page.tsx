@@ -31,7 +31,7 @@ export default function Home() {
             {/* Desktop-only items */}
             <div className="hidden md:flex items-center gap-3">
               <ThemeToggle />
-              <StarBorder as="a" href="#contact" className="pointer-events-auto" color="#00cad1">
+              <StarBorder as="a" href="#contact" className="pointer-events-auto" color="#00888a">
                 Start a project
               </StarBorder>
             </div>
@@ -67,13 +67,13 @@ export default function Home() {
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
-              <StarBorder as="a" href="#contact" className="pointer-events-auto w-full sm:w-auto text-center" color="#00cad1">
+              <StarBorder as="a" href="#contact" className="pointer-events-auto w-full sm:w-auto text-center" color="#00888a">
                 Get a proposal
               </StarBorder>
-              <StarBorder as="a" href="#services" className="pointer-events-auto w-full sm:w-auto text-center" color="#00cad1">
+              <StarBorder as="a" href="#services" className="pointer-events-auto w-full sm:w-auto text-center" color="#00888a">
                 See capabilities
               </StarBorder>
-              <StarBorder as="a" href="#book" className="pointer-events-auto w-full sm:w-auto text-center" color="#00cad1">
+              <StarBorder as="a" href="#book" className="pointer-events-auto w-full sm:w-auto text-center" color="#00888a">
                 Book a call
               </StarBorder>
             </div>
@@ -95,7 +95,7 @@ export default function Home() {
             {/* Chatbots */}
             <ServiceCard
               title="Chatbot Services"
-              accent="#00cad1"
+              dotColor="#00cad1"
               tiers={[
                 {
                   key: "basic",
@@ -136,7 +136,7 @@ export default function Home() {
             {/* Voice */}
             <ServiceCard
               title="Voice AI Services"
-              accent="#00cad1"
+              dotColor="#00cad1"
               tiers={[
                 {
                   key: "basic",
@@ -178,6 +178,7 @@ export default function Home() {
             <ServiceCard
               title="Automation Services"
               accent="#0584af"
+              dotColor="#00cad1"
               tiers={[
                 {
                   key: "basic",
@@ -219,6 +220,7 @@ export default function Home() {
             <ServiceCard
               title="Review & Reputation"
               accent="#00c8cf"
+              dotColor="#00cad1"
               tiers={[
                 {
                   key: "basic",
@@ -261,6 +263,7 @@ export default function Home() {
               <ServiceCard
                 title="Analytics & Reporting"
                 accent="#04a8ae"
+                dotColor="#00cad1"
                 tiers={[
                   {
                     key: "basic",
@@ -301,7 +304,7 @@ export default function Home() {
           </div>
 
           <div className="mt-10">
-            <StarBorder as="a" href="#contact" color="#00cad1">Get a proposal</StarBorder>
+            <StarBorder as="a" href="#contact" color="#00888a">Get a proposal</StarBorder>
           </div>
         </div>
       </section>
@@ -406,7 +409,7 @@ export default function Home() {
                 <label className="block text-sm text-white/80 mb-1">What do you want to automate?</label>
                 <textarea className="w-full min-h-28 rounded-md bg-secondary ring-1 ring-white/10 px-3 py-2 text-sm placeholder:text-white/60 focus:outline-none focus:ring-[rgba(0,202,209,0.4)]" placeholder="Short description" name="message" suppressHydrationWarning />
               </div>
-              <StarBorder as="button" type="submit" color="#00cad1" suppressHydrationWarning>Send email</StarBorder>
+              <StarBorder as="button" type="submit" color="#00888a" suppressHydrationWarning>Send email</StarBorder>
             </form>
 
             <div className="rounded-xl bg-secondary ring-1 ring-white/10 p-6">
@@ -425,7 +428,7 @@ export default function Home() {
                 </div>
               </div>
             <div className="mt-6">
-                <StarBorder as="a" href="#services" color="#00cad1">See services</StarBorder>
+                <StarBorder as="a" href="#services" color="#00888a">See services</StarBorder>
               </div>
             </div>
           </div>

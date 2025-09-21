@@ -18,6 +18,7 @@ type ServiceCardProps = {
   title: string;
   tiers: Tier[]; // must be in order basic -> smart -> full
   accent?: string; // hex color
+  dotColor?: string; // hex color
   ctaHref?: string;
   className?: string;
   icon?: React.ReactNode;
@@ -27,6 +28,7 @@ export default function ServiceCard({
   title,
   tiers,
   accent = "#00cad1",
+  dotColor,
   ctaHref = "#contact",
   className,
   icon,
@@ -46,7 +48,7 @@ export default function ServiceCard({
         <div className="flex items-center justify-between gap-3">
           <span
             className="inline-block h-2.5 w-2.5 rounded-full shadow-[0_0_14px_6px_rgba(0,202,209,0.35)]"
-            style={{ backgroundColor: accent }}
+            style={{ backgroundColor: dotColor || accent }}
           />
           <h3 className="text-xl font-semibold flex-1">{title}</h3>
           {icon && (
@@ -105,7 +107,7 @@ export default function ServiceCard({
         </div>
 
         <div className="mt-6">
-          <StarBorder as="a" href={ctaHref} className="w-full text-center" color="#00cad1">
+          <StarBorder as="a" href={ctaHref} className="w-full text-center" color="#00888a">
             Get this
           </StarBorder>
         </div>
