@@ -1,0 +1,269 @@
+{
+  "header": {
+    "services": "Services",
+    "work": "Travaux",
+    "contact": "Contact",
+    "book": "Réserver",
+    "startProject": "Démarrer un projet"
+  },
+  "hero": {
+    "subheading": "Agence d'automatisation par l'IA",
+    "heading": "Pérennisez votre entreprise avec l'automatisation par l'IA.",
+    "description": "Nous créons des agents et des flux de travail IA personnalisés qui vous font gagner du temps, réduisent les coûts et vous aident à évoluer plus rapidement et plus intelligemment pendant que vous dormez.",
+    "ctaProposal": "Obtenir une proposition",
+    "ctaCapabilities": "Voir les capacités",
+    "ctaBookCall": "Réserver un appel"
+  },
+  "services": {
+    "heading": "Solutions commerciales basées sur l'IA",
+    "subheading": "Chatbots · Agents vocaux · Automatisations · Analytique · Avis et réputation",
+    "ctaProposal": "Obtenir une proposition",
+    "cards": {
+      "chatbots": {
+        "title": "Services de chatbot",
+        "tiers": {
+          "basic": {
+            "label": "Basique",
+            "tagline": "Un assistant IA simple qui répond aux FAQ et capture automatiquement les leads.",
+            "features": [
+              "Réponses instantanées pour les heures, les prix, les services",
+              "Capture de leads vers la boîte de réception ou le CRM",
+              "Guides pour la réservation/formulaires",
+              "Couverture 24/7 ; mains libres"
+            ]
+          },
+          "smart": {
+            "label": "Intelligent",
+            "tagline": "Réservation + paiements avec flux de travail intégrés.",
+            "features": [
+              "Gère les FAQ et la réservation en un seul flux",
+              "Enregistre automatiquement les leads dans le CRM",
+              "Accepte les acomptes ou les frais en ligne",
+              "Fonctionne sur le site, Messenger, Instagram"
+            ]
+          },
+          "full": {
+            "label": "IA complète",
+            "tagline": "IA omnicanale avec mémoire, analytique et conformité.",
+            "features": [
+              "IA avancée avec mémoire de conversation",
+              "Instagram, Messenger, WhatsApp et plus",
+              "Tableaux de bord et analytique personnalisés",
+              "Conformité : RGPD / HIPAA / SOC2"
+            ]
+          }
+        }
+      },
+      "voice": {
+        "title": "Services d'IA vocale",
+        "tiers": {
+          "basic": {
+            "label": "Basique",
+            "tagline": "Une voix professionnelle qui répond à chaque appel et capture les leads.",
+            "features": [
+              "Réponses instantanées aux questions courantes",
+              "Envoie les détails de l'appelant à la boîte de réception/CRM",
+              "Transferts intelligents pour que les appelants joignent la bonne personne",
+              "Couverture après les heures de bureau + messagerie vocale"
+            ]
+          },
+          "smart": {
+            "label": "Intelligent",
+            "tagline": "Transformez les appels manqués en rendez-vous pris.",
+            "features": [
+              "Prend rendez-vous directement dans votre calendrier",
+              "Ajoute les informations de l'appelant au CRM",
+              "Accepte les acomptes pendant l'appel",
+              "Prise en charge multilingue"
+            ]
+          },
+          "full": {
+            "label": "IA complète",
+            "tagline": "Système vocal d'entreprise avec flux de travail complexes et analytique.",
+            "features": [
+              "Conversations naturelles avec mémoire",
+              "Reprogrammation, suivi des commandes, création de tickets",
+              "Tous les canaux vocaux : téléphone, WhatsApp, centres d'appels",
+              "Analytique approfondie + conformité (RGPD/HIPAA/SOC2)"
+            ]
+          }
+        }
+      },
+      "automation": {
+        "title": "Services d'automatisation",
+        "tiers": {
+          "basic": {
+            "label": "Basique",
+            "tagline": "Gagnez du temps sur les tâches répétitives et maintenez les flux de travail en marche.",
+            "features": [
+              "Automatise les formulaires, rappels, notifications",
+              "Connecte Sheets, e-mail, calendrier",
+              "Stocke et organise automatiquement les leads",
+              "Fonctionne 24/7 en arrière-plan"
+            ]
+          },
+          "smart": {
+            "label": "Intelligent",
+            "tagline": "Connectez les outils principaux pour rationaliser les opérations et augmenter l'efficacité.",
+            "features": [
+              "Inclut tout le Basique",
+              "Intégrations CRM (HubSpot, Zoho, Salesforce)",
+              "Paiements (Stripe, Square, PayPal)",
+              "Flux de travail multi-étapes + tableau de bord de performance"
+            ]
+          },
+          "full": {
+            "label": "IA complète",
+            "tagline": "Back-end personnalisé basé sur l'IA, conçu pour l'échelle.",
+            "features": [
+              "Traitement de documents par l'IA",
+              "Intégrations d'API personnalisées",
+              "Extraction et enrichissement de données",
+              "Analytique avancée, surveillance, conformité"
+            ]
+          }
+        }
+      },
+      "reputation": {
+        "title": "Avis et réputation",
+        "tiers": {
+          "basic": {
+            "label": "Basique",
+            "tagline": "Collectez plus d'avis positifs avec un minimum d'effort.",
+            "features": [
+              "Demandes automatisées par SMS/e-mail",
+              "Direct vers Google et Facebook",
+              "Suivi simple des demandes",
+              "Relances jusqu'à ce que l'avis soit laissé"
+            ]
+          },
+          "smart": {
+            "label": "Intelligent",
+            "tagline": "Protégez et développez la réputation de votre marque.",
+            "features": [
+              "Inclut tout le Basique",
+              "Demandes sur Google, Facebook, Yelp et plus",
+              "Filtre les commentaires négatifs en privé",
+              "Expérience de marque + tableau de bord des tendances"
+            ]
+          },
+          "full": {
+            "label": "IA complète",
+            "tagline": "Suite de gestion de la réputation par l'IA pour entreprise.",
+            "features": [
+              "Analyse des sentiments par l'IA",
+              "Surveillance et comparaison des concurrents",
+              "Réponses personnalisées par l'IA",
+              "Multi-sites/langues + tableaux de bord exécutifs"
+            ]
+          }
+        }
+      },
+      "analytics": {
+        "title": "Analytique et rapports",
+        "tiers": {
+          "basic": {
+            "label": "Basique",
+            "tagline": "KPI simples toujours disponibles sans feuilles de calcul.",
+            "features": [
+              "Rapports quotidiens/hebdomadaires sur les leads et les ventes",
+              "KPI principaux dans un tableau de bord clair",
+              "Rapports de synthèse par e-mail/SMS",
+              "Suivi des données 24/7"
+            ]
+          },
+          "smart": {
+            "label": "Intelligent",
+            "tagline": "Intègre plusieurs plateformes pour une vue complète.",
+            "features": [
+              "Inclut tout le Basique",
+              "Données CRM, publicités, site web et réservation",
+              "KPI personnalisés + détection des tendances par l'IA",
+              "Comparaisons semaine après semaine/mois après mois"
+            ]
+          },
+          "full": {
+            "label": "IA complète",
+            "tagline": "Analytique d'entreprise avec prévisions et tableaux de bord exécutifs.",
+            "features": [
+              "Prévisions prédictives",
+              "Tableaux de bord exécutifs et départementaux",
+              "Rapports multi-sites/langues",
+              "Intégrations ERP/entrepôt de données"
+            ]
+          }
+        }
+      },
+      "getThis": "Obtenir"
+    }
+  },
+  "testimonials": {
+    "heading": "Ce que les clients réalisent avec Noryon",
+    "description": "Résultats réels des chatbots IA, agents vocaux, automatisations, analytique et systèmes de réputation.",
+    "items": [
+      {
+        "author": {
+          "name": "Services de chatbot · Basique",
+          "handle": "FAQ 24/7 + capture de leads"
+        },
+        "text": "Un assistant IA simple qui répond aux FAQ et capture les leads pour que vous ne manquiez jamais une opportunité."
+      },
+      {
+        "author": {
+          "name": "Services de chatbot · Intelligent",
+          "handle": "Réservation + paiements"
+        },
+        "text": "Prend des rendez-vous, enregistre les leads dans votre CRM et accepte les acomptes en un seul flux."
+      },
+      {
+        "author": {
+          "name": "Services de chatbot · IA complète",
+          "handle": "Omnicanal + analytique"
+        },
+        "text": "IA avancée avec mémoire sur Instagram, Messenger, WhatsApp et plus — prête pour la conformité."
+      },
+      {
+        "author": {
+          "name": "IA vocale · Basique",
+          "handle": "Répondre à chaque appel"
+        },
+        "text": "Voix professionnelle qui répond, achemine et capture les leads 24 heures sur 24."
+      },
+      {
+        "author": {
+          "name": "Automatisation · Intelligent",
+          "handle": "CRM + paiements + flux de travail"
+        },
+        "text": "Connecte vos outils, automatise les tâches en plusieurs étapes et ajoute un tableau de bord de performance."
+      },
+      {
+        "author": {
+          "name": "Réputation · Intelligent",
+          "handle": "Augmenter les avis, filtrer les négatifs"
+        },
+        "text": "Demandes d'avis automatisées et un tableau de bord des tendances pour protéger et développer votre marque."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Automatisez votre croissance",
+    "description": "Parlez-nous de vos objectifs. Nous vous enverrons un plan court et un devis.",
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "E-mail",
+      "emailPlaceholder": "vous@entreprise.com",
+      "message": "Que voulez-vous automatiser ?",
+      "messagePlaceholder": "Courte description",
+      "submit": "Envoyer l'e-mail"
+    },
+    "ctaServices": "Voir les services"
+  },
+  "booking": {
+    "heading": "Planifier un appel stratégique",
+    "description": "Choisissez une heure qui vous convient — sans allers-retours."
+  },
+  "footer": {
+    "copyright": "© {year} Noryon. Tous droits réservés."
+  }
+}

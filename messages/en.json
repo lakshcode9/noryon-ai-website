@@ -1,0 +1,269 @@
+{
+  "header": {
+    "services": "Services",
+    "work": "Work",
+    "contact": "Contact",
+    "book": "Book",
+    "startProject": "Start a project"
+  },
+  "hero": {
+    "subheading": "AI Automation Agency",
+    "heading": "Future-Proof Your Business with AI Automation.",
+    "description": "We build custom AI agents and workflows that save you time, cut costs, and help you scale faster and smarter while you sleep.",
+    "ctaProposal": "Get a proposal",
+    "ctaCapabilities": "See capabilities",
+    "ctaBookCall": "Book a call"
+  },
+  "services": {
+    "heading": "AI‑Powered Business Solutions",
+    "subheading": "Chatbots · Voice Agents · Automations · Analytics · Review & Reputation",
+    "ctaProposal": "Get a proposal",
+    "cards": {
+      "chatbots": {
+        "title": "Chatbot Services",
+        "tiers": {
+          "basic": {
+            "label": "Basic",
+            "tagline": "A simple AI assistant that answers FAQs and captures leads automatically.",
+            "features": [
+              "Instant answers for hours, pricing, services",
+              "Lead capture to inbox or CRM",
+              "Guides to booking/forms",
+              "24/7 coverage; hands‑off"
+            ]
+          },
+          "smart": {
+            "label": "Smart",
+            "tagline": "Booking + payments with integrated workflows.",
+            "features": [
+              "Handles FAQs and booking in one flow",
+              "Logs leads to CRM automatically",
+              "Takes deposits or fees online",
+              "Works across site, Messenger, Instagram"
+            ]
+          },
+          "full": {
+            "label": "Full AI",
+            "tagline": "Omnichannel AI with memory, analytics and compliance.",
+            "features": [
+              "Advanced AI with conversation memory",
+              "Instagram, Messenger, WhatsApp and more",
+              "Custom dashboards and analytics",
+              "Compliance: GDPR / HIPAA / SOC2"
+            ]
+          }
+        }
+      },
+      "voice": {
+        "title": "Voice AI Services",
+        "tiers": {
+          "basic": {
+            "label": "Basic",
+            "tagline": "A professional voice that answers every call and captures leads.",
+            "features": [
+              "Instant answers for common questions",
+              "Sends caller details to inbox/CRM",
+              "Smart transfers so callers reach the right person",
+              "After‑hours coverage + voicemail"
+            ]
+          },
+          "smart": {
+            "label": "Smart",
+            "tagline": "Turn missed calls into booked appointments.",
+            "features": [
+              "Books directly into your calendar",
+              "Adds caller info to CRM",
+              "Accepts deposits during the call",
+              "Multi‑language support"
+            ]
+          },
+          "full": {
+            "label": "Full AI",
+            "tagline": "Enterprise voice system with complex workflows and analytics.",
+            "features": [
+              "Natural conversations with memory",
+              "Rescheduling, order tracking, ticket creation",
+              "All voice channels: phone, WhatsApp, call centers",
+              "Deep analytics + compliance (GDPR/HIPAA/SOC2)"
+            ]
+          }
+        }
+      },
+      "automation": {
+        "title": "Automation Services",
+        "tiers": {
+          "basic": {
+            "label": "Basic",
+            "tagline": "Save time on repetitive tasks and keep workflows running.",
+            "features": [
+              "Automates forms, reminders, notifications",
+              "Connects Sheets, email, calendar",
+              "Auto‑stores and organizes leads",
+              "Runs 24/7 in the background"
+            ]
+          },
+          "smart": {
+            "label": "Smart",
+            "tagline": "Connect core tools to streamline operations and boost efficiency.",
+            "features": [
+              "Includes all Basic",
+              "CRM integrations (HubSpot, Zoho, Salesforce)",
+              "Payments (Stripe, Square, PayPal)",
+              "Multi‑step workflows + performance dashboard"
+            ]
+          },
+          "full": {
+            "label": "Full AI",
+            "tagline": "Custom AI‑powered back‑end built for scale.",
+            "features": [
+              "AI document processing",
+              "Custom API integrations",
+              "Data extraction & enrichment",
+              "Advanced analytics, monitoring, compliance"
+            ]
+          }
+        }
+      },
+      "reputation": {
+        "title": "Review & Reputation",
+        "tiers": {
+          "basic": {
+            "label": "Basic",
+            "tagline": "Collect more positive reviews with minimal effort.",
+            "features": [
+              "Automated SMS/email requests",
+              "Direct to Google & Facebook",
+              "Simple request tracking",
+              "Follow‑ups until feedback is left"
+            ]
+          },
+          "smart": {
+            "label": "Smart",
+            "tagline": "Protect and grow your brand’s reputation.",
+            "features": [
+              "Includes all Basic",
+              "Requests on Google, Facebook, Yelp & more",
+              "Filters negative feedback privately",
+              "Branded experience + trends dashboard"
+            ]
+          },
+          "full": {
+            "label": "Full AI",
+            "tagline": "Enterprise AI reputation management suite.",
+            "features": [
+              "AI sentiment analysis",
+              "Competitor monitoring + comparison",
+              "Personalized AI replies",
+              "Multi‑location/language + executive dashboards"
+            ]
+          }
+        }
+      },
+      "analytics": {
+        "title": "Analytics & Reporting",
+        "tiers": {
+          "basic": {
+            "label": "Basic",
+            "tagline": "Simple KPIs always available without spreadsheets.",
+            "features": [
+              "Daily/weekly lead & sales reports",
+              "Top KPIs in a clean dashboard",
+              "Summary reports via email/SMS",
+              "24/7 data tracking"
+            ]
+          },
+          "smart": {
+            "label": "Smart",
+            "tagline": "Integrates multiple platforms to give a complete view.",
+            "features": [
+              "Includes all Basic",
+              "CRM, ads, website & booking data",
+              "Custom KPIs + AI trend detection",
+              "Week‑over‑week/month‑over‑month comparisons"
+            ]
+          },
+          "full": {
+            "label": "Full AI",
+            "tagline": "Enterprise analytics with forecasting and exec dashboards.",
+            "features": [
+              "Predictive forecasting",
+              "Executive & departmental dashboards",
+              "Multi‑location/language reporting",
+              "ERP/data warehouse integrations"
+            ]
+          }
+        }
+      },
+      "getThis": "Get this"
+    }
+  },
+  "testimonials": {
+    "heading": "What clients achieve with Noryon",
+    "description": "Real outcomes from AI chatbots, voice agents, automations, analytics, and reputation systems.",
+    "items": [
+      {
+        "author": {
+          "name": "Chatbot Services · Basic",
+          "handle": "24/7 FAQ + lead capture"
+        },
+        "text": "A simple AI assistant that answers FAQs and captures leads so you never miss an opportunity."
+      },
+      {
+        "author": {
+          "name": "Chatbot Services · Smart",
+          "handle": "Booking + payments"
+        },
+        "text": "Books appointments, logs leads in your CRM and takes deposits in one flow."
+      },
+      {
+        "author": {
+          "name": "Chatbot Services · Full AI",
+          "handle": "Omnichannel + analytics"
+        },
+        "text": "Advanced AI with memory across Instagram, Messenger, WhatsApp and more — compliance ready."
+      },
+      {
+        "author": {
+          "name": "Voice AI · Basic",
+          "handle": "Answer every call"
+        },
+        "text": "Professional voice that answers, routes and captures leads around the clock."
+      },
+      {
+        "author": {
+          "name": "Automation · Smart",
+          "handle": "CRM + payments + workflows"
+        },
+        "text": "Connects your tools, automates multi‑step tasks and adds a performance dashboard."
+      },
+      {
+        "author": {
+          "name": "Reputation · Smart",
+          "handle": "Grow reviews, filter negatives"
+        },
+        "text": "Automated review requests and a trends dashboard to protect and grow your brand."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Let’s automate your growth",
+    "description": "Tell us about your goals. We’ll send a short plan and pricing.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "message": "What do you want to automate?",
+      "messagePlaceholder": "Short description",
+      "submit": "Send email"
+    },
+    "ctaServices": "See services"
+  },
+  "booking": {
+    "heading": "Schedule a strategy call",
+    "description": "Pick a time that works for you — no back and forth."
+  },
+  "footer": {
+    "copyright": "© {year} Noryon. All rights reserved."
+  }
+}
