@@ -265,5 +265,34 @@
   },
   "footer": {
     "copyright": "© {year} Noryon. Tous droits réservés."
+  },
+  "testimonialStack": {
+    "items": [
+      {
+        "name": "Responsable des opérations, Marque de détail",
+        "role": "Automatisation du support entrant",
+        "quote": "Notre chatbot dévie 62% des tickets tandis que le CSAT a augmenté de 18%. Les clients obtiennent des réponses instantanées, et mon équipe se concentre sur les tâches difficiles."
+      },
+      {
+        "name": "Gestionnaire de clinique",
+        "role": "Agent de réservation vocal",
+        "quote": "Les réservations après les heures d'ouverture ont augmenté de 35%. L'agent prend les rendez-vous, accepte les acomptes et parle la langue de nos patients — littéralement."
+      },
+      {
+        "name": "Directeur des opérations, SaaS B2B",
+        "role": "Automatisation du back-office",
+        "quote": "Nous avons récupéré environ 40 heures chaque semaine grâce aux synchronisations CRM, à la facturation et aux rapports. Cela fonctionne simplement en arrière-plan."
+      },
+      {
+        "name": "Responsable marketing, multi-sites",
+        "role": "Qualification des leads sortants",
+        "quote": "Nous sommes passés de 0 à 400 leads qualifiés par mois en deux semaines. Il trouve les questions sans réponse sur les réseaux sociaux, puis envoie des réponses utiles en DM."
+      },
+      {
+        "name": "Fondateur, Agence de création",
+        "role": "Stratège créatif IA",
+        "quote": "C'est comme avoir une équipe de stratèges juniors. Il recherche les tendances et élabore des concepts, afin que nous puissions nous concentrer sur la création de haut niveau."
+      }
+    ]
   }
 }

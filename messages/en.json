@@ -265,5 +265,34 @@
   },
   "footer": {
     "copyright": "© {year} Noryon. All rights reserved."
+  },
+    "testimonialStack": {
+    "items": [
+      {
+        "name": "Ops Lead, Retail Brand",
+        "role": "Inbound Support Automation",
+        "quote": "Our chatbot deflects 62% of tickets while CSAT is up 18%. Customers get instant answers, and my team focuses on the hard stuff."
+      },
+      {
+        "name": "Clinic Manager",
+        "role": "Voice Booking Agent",
+        "quote": "After-hours bookings grew 35%. The agent books, takes deposits, and speaks our patients’ language — literally."
+      },
+      {
+        "name": "Ops Director, B2B SaaS",
+        "role": "Back‑Office Automations",
+        "quote": "We recovered ~40 hours every week through CRM syncs, invoicing, and reporting. It just runs in the background."
+      },
+      {
+        "name": "Marketing Lead, Multi‑location",
+        "role": "Outbound Lead Qualification",
+        "quote": "We went from 0 to 400 qualified leads per month inside two weeks. It finds unanswered questions on social, then DMs helpful answers."
+      },
+      {
+        "name": "Founder, Creative Agency",
+        "role": "AI Creative Strategist",
+        "quote": "It’s like having a team of junior strategists. It researches trends and drafts concepts, so we can focus on high-level creative."
+      }
+    ]
   }
 }

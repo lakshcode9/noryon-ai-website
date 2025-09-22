@@ -1,17 +1,14 @@
 "use client";
 
 import React from "react";
+import { useTranslations } from "next-intl";
 import { ThumbsUp, ShieldCheck, Clock, Share, Rocket, Zap, Gem, MessageSquare, Headset, BarChart3 } from "lucide-react";
 import { TestimonialStack, Testimonial } from "@/components/ui/glass-testimonial-swiper";
 
-const testimonialsData: Testimonial[] = [
+const staticData: Omit<Testimonial, "name" | "role" | "quote">[] = [
   {
     id: 1,
     initials: "CS",
-    name: "Ops Lead, Retail Brand",
-    role: "Inbound Support Automation",
-    quote:
-      "Our chatbot deflects 62% of tickets while CSAT is up 18%. Customers get instant answers, and my team focuses on the hard stuff.",
     tags: [
       { text: "FEATURED", type: "featured" },
       { text: "LangGraph • RAG • WhatsApp", type: "default" },
@@ -21,14 +18,11 @@ const testimonialsData: Testimonial[] = [
       { icon: ThumbsUp, text: "+18% CSAT" },
     ],
     avatarGradient: "linear-gradient(135deg, #5e6ad2, #8b5cf6)",
+    avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
   },
   {
     id: 2,
     initials: "VA",
-    name: "Clinic Manager",
-    role: "Voice Booking Agent",
-    quote:
-      "After-hours bookings grew 35%. The agent books, takes deposits, and speaks our patients’ language — literally.",
     tags: [
       { text: "Twilio • Calendars • Stripe", type: "default" },
     ],
@@ -37,14 +31,11 @@ const testimonialsData: Testimonial[] = [
       { icon: ShieldCheck, text: "PCI ready" },
     ],
     avatarGradient: "linear-gradient(135deg, #10b981, #059669)",
+    avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
   },
   {
     id: 3,
     initials: "BO",
-    name: "Ops Director, B2B SaaS",
-    role: "Back‑Office Automations",
-    quote:
-      "We recovered ~40 hours every week through CRM syncs, invoicing, and reporting. It just runs in the background.",
     tags: [
       { text: "HubSpot • Sheets • Make/Zapier", type: "default" },
     ],
@@ -53,42 +44,46 @@ const testimonialsData: Testimonial[] = [
       { icon: Share, text: "Data unified" },
     ],
     avatarGradient: "linear-gradient(135deg, #f59e0b, #d97706)",
+    avatarUrl: "https://i.pravatar.cc/150?u=a04258114e29026702d",
   },
   {
     id: 4,
     initials: "RR",
-    name: "Marketing Lead, Multi‑location",
-    role: "Review & Reputation",
-    quote:
-      "Reviews tripled and our average rating climbed by 1.2 stars in 8 weeks. Negative feedback gets routed privately.",
     tags: [
-      { text: "Google • Facebook • Yelp", type: "default" },
+      { text: "SERP API • Apollo.io • X/Twitter", type: "default" },
     ],
     stats: [
-      { icon: Rocket, text: "3x review volume" },
-      { icon: Zap, text: "+1.2★ rating" },
+      { icon: Rocket, text: "400+ leads/mo" },
+      { icon: Zap, text: "2‑week ramp" },
     ],
-    avatarGradient: "linear-gradient(135deg, #ec4899, #d946ef)",
+    avatarGradient: "linear-gradient(135deg, #ef4444, #dc2626)",
+    avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026707d",
   },
   {
     id: 5,
-    initials: "AR",
-    name: "COO, Marketplace",
-    role: "Analytics & Reporting",
-    quote:
-      "Leaders finally get one dashboard that answers ‘how are we doing?’ AI highlights trends and sends weekly summaries.",
+    initials: "JG",
     tags: [
-      { text: "CRM • Ads • Bookings • Web", type: "default" },
+      { text: "ElevenLabs • Midjourney • Perplexity", type: "default" },
     ],
     stats: [
-      { icon: BarChart3, text: "Exec dashboards" },
-      { icon: Gem, text: "Forecasting" },
+      { icon: Gem, text: "4x creative output" },
+      { icon: BarChart3, text: "50% faster delivery" },
     ],
-    avatarGradient: "linear-gradient(135deg, #3b82f6, #6366f1)",
+    avatarGradient: "linear-gradient(135deg, #3b82f6, #2563eb)",
+    avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026708d",
   },
 ];
 
 export default function TestimonialStackDemo() {
+  const t = useTranslations("testimonialStack");
+
+  const testimonialsData: Testimonial[] = staticData.map((item, index) => ({
+    ...item,
+    name: t(`items.${index}.name`),
+    role: t(`items.${index}.role`),
+    quote: t(`items.${index}.quote`),
+  }));
+
   return (
     <div className="relative w-full min-h-[520px] flex items-center justify-center p-4 overflow-hidden">
       {/* Background image layer */}
