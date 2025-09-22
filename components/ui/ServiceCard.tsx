@@ -96,7 +96,7 @@ export default function ServiceCard({
         </div>
 
         {/* Spacer with min-height */}
-        <div className="flex-1">
+        <div className="flex-1 min-h-48">
           {activeTier?.tagline && <p className="mt-3 text-sm text-white/90">{activeTier.tagline}</p>}
 
           {activeTier?.features?.length ? (
