@@ -166,11 +166,11 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
           <TestimonialsSection
             title={t("testimonials.heading")}
             description={t("testimonials.description")}
-            testimonials={(t.raw("testimonials.items") as Array<{author:{name:string; handle:string}; text:string}>).map((item, i) => ({
+            testimonials={(t.raw("testimonials.items") as Array<{author:{name:string; handle:string; avatar:string}; text:string}>).map(item => ({
               author: {
                 name: item.author.name,
                 handle: item.author.handle,
-                avatar: `https://source.unsplash.com/random/150x150?sig=${i}`
+                avatar: item.author.avatar
               },
               text: item.text
             }))}
@@ -195,11 +195,11 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
                   <a className="text-white hover:text-accent transition-colors" href="mailto:contact@noryon.ai">contact@noryon.ai</a>
                 </div>
                 <div>
-                  <div className="text-white/60">Phone</div>
+                  <div className="text-white/60">{t("contact.form.phone")}</div>
                   <a className="text-white hover:text-accent transition-colors" href="tel:+15149841671">(514) 984‑1671</a>
                 </div>
                 <div>
-                  <div className="text-white/60">Location</div>
+                  <div className="text-white/60">{t("contact.form.location")}</div>
                   <div className="text-white">Montreal, QC, Canada</div>
                 </div>
               </div>

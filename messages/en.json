@@ -204,42 +204,48 @@
       {
         "author": {
           "name": "Chatbot Services · Basic",
-          "handle": "24/7 FAQ + lead capture"
+          "handle": "24/7 FAQ + lead capture",
+          "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026024d"
         },
         "text": "A simple AI assistant that answers FAQs and captures leads so you never miss an opportunity."
       },
       {
         "author": {
           "name": "Chatbot Services · Smart",
-          "handle": "Booking + payments"
+          "handle": "Booking + payments",
+          "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026704d"
         },
         "text": "Books appointments, logs leads in your CRM and takes deposits in one flow."
       },
       {
         "author": {
           "name": "Chatbot Services · Full AI",
-          "handle": "Omnichannel + analytics"
+          "handle": "Omnichannel + analytics",
+          "avatar": "https://i.pravatar.cc/150?u=a04258114e29026702d"
         },
         "text": "Advanced AI with memory across Instagram, Messenger, WhatsApp and more — compliance ready."
       },
       {
         "author": {
           "name": "Voice AI · Basic",
-          "handle": "Answer every call"
+          "handle": "Answer every call",
+          "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026707d"
         },
         "text": "Professional voice that answers, routes and captures leads around the clock."
       },
       {
         "author": {
           "name": "Automation · Smart",
-          "handle": "CRM + payments + workflows"
+          "handle": "CRM + payments + workflows",
+          "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026708d"
         },
         "text": "Connects your tools, automates multi‑step tasks and adds a performance dashboard."
       },
       {
         "author": {
           "name": "Reputation · Smart",
-          "handle": "Grow reviews, filter negatives"
+          "handle": "Grow reviews, filter negatives",
+          "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026709d"
         },
         "text": "Automated review requests and a trends dashboard to protect and grow your brand."
       }
@@ -253,6 +259,8 @@
       "namePlaceholder": "Your name",
       "email": "Email",
       "emailPlaceholder": "you@company.com",
+      "phone": "Phone",
+      "location": "Location",
       "message": "What do you want to automate?",
       "messagePlaceholder": "Short description",
       "submit": "Send email"

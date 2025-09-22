@@ -204,42 +204,48 @@
       {
         "author": {
           "name": "Services de chatbot · Basique",
-          "handle": "FAQ 24/7 + capture de leads"
+          "handle": "FAQ 24/7 + capture de leads",
+          "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026024d"
         },
         "text": "Un assistant IA simple qui répond aux FAQ et capture les leads pour que vous ne manquiez jamais une opportunité."
       },
       {
         "author": {
           "name": "Services de chatbot · Intelligent",
-          "handle": "Réservation + paiements"
+          "handle": "Réservation + paiements",
+          "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026704d"
         },
         "text": "Prend des rendez-vous, enregistre les leads dans votre CRM et accepte les acomptes en un seul flux."
       },
       {
         "author": {
           "name": "Services de chatbot · IA complète",
-          "handle": "Omnicanal + analytique"
+          "handle": "Omnicanal + analytique",
+          "avatar": "https://i.pravatar.cc/150?u=a04258114e29026702d"
         },
         "text": "IA avancée avec mémoire sur Instagram, Messenger, WhatsApp et plus — prête pour la conformité."
       },
       {
         "author": {
           "name": "IA vocale · Basique",
-          "handle": "Répondre à chaque appel"
+          "handle": "Répondre à chaque appel",
+          "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026707d"
         },
         "text": "Voix professionnelle qui répond, achemine et capture les leads 24 heures sur 24."
       },
       {
         "author": {
           "name": "Automatisation · Intelligent",
-          "handle": "CRM + paiements + flux de travail"
+          "handle": "CRM + paiements + flux de travail",
+          "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026708d"
         },
         "text": "Connecte vos outils, automatise les tâches en plusieurs étapes et ajoute un tableau de bord de performance."
       },
       {
         "author": {
           "name": "Réputation · Intelligent",
-          "handle": "Augmenter les avis, filtrer les négatifs"
+          "handle": "Augmenter les avis, filtrer les négatifs",
+          "avatar": "https://i.pravatar.cc/150?u=a042581f4e29026709d"
         },
         "text": "Demandes d'avis automatisées et un tableau de bord des tendances pour protéger et développer votre marque."
       }
@@ -253,6 +259,8 @@
       "namePlaceholder": "Votre nom",
       "email": "E-mail",
       "emailPlaceholder": "vous@entreprise.com",
+      "phone": "Téléphone",
+      "location": "Emplacement",
       "message": "Que voulez-vous automatiser ?",
       "messagePlaceholder": "Courte description",
       "submit": "Envoyer l'e-mail"
