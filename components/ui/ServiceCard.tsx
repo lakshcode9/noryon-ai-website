@@ -4,6 +4,7 @@ import React from "react";
 import GlowCard from "./GlowCard";
 import { cn } from "@/lib/utils";
 import { StarBorder } from "@/components/ui/star-border";
+import { useTranslations } from "next-intl";
 
 type TierKey = "basic" | "smart" | "full";
 
@@ -33,6 +34,7 @@ export default function ServiceCard({
   className,
   icon,
 }: ServiceCardProps) {
+  const t = useTranslations();
   const [active, setActive] = React.useState<TierKey>(tiers[0]?.key || "basic");
   const activeTier = tiers.find(t => t.key === active) || tiers[0];
   const [isMounted, setIsMounted] = React.useState(false);
@@ -43,8 +45,8 @@ export default function ServiceCard({
 
 
   return (
-    <GlowCard accentColor={accent} className={className}>
-      <div className="p-6">
+    <GlowCard accentColor={accent} className={cn("flex flex-col", className)}>
+      <div className="p-6 flex flex-col flex-1">
         <div className="flex items-center justify-between gap-3">
           <span
             className="inline-block h-2.5 w-2.5 rounded-full shadow-[0_0_14px_6px_rgba(0,202,209,0.35)]"
@@ -94,7 +96,7 @@ export default function ServiceCard({
         </div>
 
         {/* Spacer with min-height */}
-        <div className="min-h-48">
+        <div className="flex-1">
           {activeTier?.tagline && <p className="mt-3 text-sm text-white/90">{activeTier.tagline}</p>}
 
           {activeTier?.features?.length ? (
@@ -108,7 +110,7 @@ export default function ServiceCard({
 
         <div className="mt-6">
           <StarBorder as="a" href={ctaHref} className="w-full text-center" color="#00888a">
-            Get this
+            {t("services.cards.getThis")}
           </StarBorder>
         </div>
       </div>

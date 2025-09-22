@@ -21,7 +21,6 @@ export async function generateMetadata({
     description,
     icons: {
       icon: [
-        { url: "/favicon.ico" },
         { url: "/@favicon.png", type: "image/png", sizes: "16x16" },
         { url: "/@favicon.png", type: "image/png", sizes: "32x32" },
         { url: "/@favicon.png", type: "image/png", sizes: "48x48" },
