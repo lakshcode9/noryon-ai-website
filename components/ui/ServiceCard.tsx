@@ -95,17 +95,30 @@ export default function ServiceCard({
           })}
         </div>
 
-        {/* Spacer with min-height */}
-        <div className="flex-1 min-h-48">
-          {activeTier?.tagline && <p className="mt-3 text-sm text-white/90">{activeTier.tagline}</p>}
+        {/* Content area that changes */}
+        <div className="flex-1 grid">
+          {tiers.map((tier) => (
+            <div
+              key={tier.key}
+              style={{ gridArea: '1 / 1 / 2 / 2' }}
+              className={cn('transition-opacity', {
+                'visible opacity-100': active === tier.key,
+                'invisible opacity-0': active !== tier.key,
+              })}
+            >
+              {tier?.tagline && (
+                <p className="mt-3 text-sm text-white/90">{tier.tagline}</p>
+              )}
 
-          {activeTier?.features?.length ? (
-            <ul className="mt-4 space-y-2 text-sm text-white/80 list-disc list-inside">
-              {activeTier.features.map((f, i) => (
-                <li key={i}>{f}</li>
-              ))}
-            </ul>
-          ) : null}
+              {tier?.features?.length ? (
+                <ul className="mt-4 space-y-2 text-sm text-white/80 list-disc list-inside">
+                  {tier.features.map((f, i) => (
+                    <li key={i}>{f}</li>
+                  ))}
+                </ul>
+              ) : null}
+            </div>
+          ))}
         </div>
 
         <div className="mt-6">
