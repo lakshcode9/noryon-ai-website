@@ -9,7 +9,7 @@ type Props = {
   style?: React.CSSProperties;
 };
 
-export default function HeroSpline({ scene, className, style }: Props) {
+function HeroSpline({ scene, className, style }: Props) {
   const containerRef = React.useRef<HTMLDivElement | null>(null);
   const [isInView, setIsInView] = React.useState(false);
   const [isTabVisible, setIsTabVisible] = React.useState(true);
@@ -55,5 +55,7 @@ export default function HeroSpline({ scene, className, style }: Props) {
     </div>
   );
 }
+
+export default React.memo(HeroSpline);
 
 

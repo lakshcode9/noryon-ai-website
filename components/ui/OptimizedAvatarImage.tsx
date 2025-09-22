@@ -15,7 +15,7 @@ const OptimizedAvatarImage = React.forwardRef<
     className={cn("aspect-square h-full w-full", className)}
     {...props}
   >
-    <Image src={props.src!} alt={props.alt!} width={48} height={48} />
+    <Image src={props.src! as string} alt={props.alt!} width={48} height={48} />
   </AvatarPrimitive.Image>
 ));
 OptimizedAvatarImage.displayName = AvatarPrimitive.Image.displayName;

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect, useCallback, CSSProperties } from "react";
+import Image from "next/image";
 
 // --- Component Interfaces ---
 export interface Testimonial {
@@ -128,9 +129,11 @@ export const TestimonialStack = ({ testimonials, visibleBehind = 2 }: Testimonia
               <div className="flex items-start justify-between mb-6">
                 <div className="flex items-center gap-4">
                   {testimonial.avatarUrl ? (
-                    <img
+                    <Image
                       src={testimonial.avatarUrl}
                       alt={testimonial.name}
+                      width={44}
+                      height={44}
                       className="flex-shrink-0 w-11 h-11 rounded-xl object-cover"
                     />
                   ) : (
