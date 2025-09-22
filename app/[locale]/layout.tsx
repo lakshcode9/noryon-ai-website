@@ -4,19 +4,41 @@ import { GeistMono } from "geist/font/mono";
 import OpeningSplash from "@/components/OpeningSplash";
 import "@/app/globals.css";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: "Noryon AI",
-  description: "Future-Proof Your Business with AI Automation.",
-};
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  const description = t("description");
+
+  return {
+    title: `Noryon - ${description}`,
+    description,
+    icons: {
+      icon: [
+        { url: "/favicon.ico" },
+        { url: "/@favicon.png", type: "image/png", sizes: "16x16" },
+        { url: "/@favicon.png", type: "image/png", sizes: "32x32" },
+        { url: "/@favicon.png", type: "image/png", sizes: "48x48" },
+        { url: "/@favicon.png", type: "image/png", sizes: "180x180" },
+        { url: "/@favicon.png", type: "image/png", sizes: "256x256" },
+        { url: "/@favicon.png", type: "image/png", sizes: "512x512" },
+      ],
+      apple: "/@favicon.png",
+      shortcut: "/@favicon.png",
+    },
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
- 
+
 export default async function RootLayout({
   children,
   params,
