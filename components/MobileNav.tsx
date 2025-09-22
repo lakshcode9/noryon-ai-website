@@ -3,8 +3,11 @@
 import { useEffect, useId, useState } from "react";
 import { StarBorder } from "./ui/star-border";
 import ThemeToggle from "./ThemeToggle";
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function MobileNav() {
+  const t = useTranslations();
   const [open, setOpen] = useState(false);
   const id = useId();
 
@@ -44,16 +47,19 @@ export default function MobileNav() {
             className="absolute right-4 top-16 w-[min(90vw,320px)] max-h-[calc(100dvh-100px)] overflow-auto rounded-xl bg-secondary ring-1 ring-white/10 p-4 text-sm text-white shadow-xl animate-in fade-in-20 slide-in-from-top-4"
           >
             <nav className="flex flex-col gap-2">
-              <a href="#services" onClick={() => setOpen(false)} className="rounded-md hover:bg-white/10 px-3 py-2 transition-colors">Services</a>
-              <a href="#work" onClick={() => setOpen(false)} className="rounded-md hover:bg-white/10 px-3 py-2 transition-colors">Work</a>
-              <a href="#contact" onClick={() => setOpen(false)} className="rounded-md hover:bg-white/10 px-3 py-2 transition-colors">Contact</a>
-              <a href="#book" onClick={() => setOpen(false)} className="rounded-md hover:bg-white/10 px-3 py-2 transition-colors">Book a call</a>
+              <a href="#services" onClick={() => setOpen(false)} className="rounded-md hover:bg-white/10 px-3 py-2 transition-colors">{t("header.services")}</a>
+              <a href="#work" onClick={() => setOpen(false)} className="rounded-md hover:bg-white/10 px-3 py-2 transition-colors">{t("header.work")}</a>
+              <a href="#contact" onClick={() => setOpen(false)} className="rounded-md hover:bg-white/10 px-3 py-2 transition-colors">{t("header.contact")}</a>
+              <a href="#book" onClick={() => setOpen(false)} className="rounded-md hover:bg-white/10 px-3 py-2 transition-colors">{t("header.book")}</a>
             </nav>
             <div className="mt-4 pt-4 border-t border-white/10 flex flex-col items-center gap-4">
-              <StarBorder as="a" href="#contact" onClick={() => setOpen(false)} className="w-full text-center">
-                Start a project
+              <StarBorder as="a" href="#contact" onClick={() => setOpen(false)} className="w-full text-center" color="#00888a">
+                {t("header.startProject")}
               </StarBorder>
-              <ThemeToggle />
+              <div className="flex justify-between w-full items-center">
+                <LanguageSwitcher />
+                <ThemeToggle />
+              </div>
             </div>
           </div>
         </div>
