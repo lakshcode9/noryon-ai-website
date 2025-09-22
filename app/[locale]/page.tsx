@@ -102,7 +102,7 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
             <p className="mt-4 text-white/90">{t("services.subheading")}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 items-stretch">
             <ServiceCard
               title={t("services.cards.chatbots.title")}
               dotColor="#00cad1"

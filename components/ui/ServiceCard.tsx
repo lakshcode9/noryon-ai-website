@@ -45,7 +45,7 @@ export default function ServiceCard({
 
 
   return (
-    <GlowCard accentColor={accent} className={cn("h-full flex flex-col", className)}>
+    <GlowCard accentColor={accent} className={cn("h-full flex flex-col min-h-[520px]", className)}>
       <div className="p-6 flex flex-col flex-1">
         <div className="flex items-center justify-between gap-3">
           <span
@@ -66,7 +66,7 @@ export default function ServiceCard({
         </div>
 
         {/* Tier tabs */}
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="mt-4 flex items-center gap-2">
           {tiers.map((t) => {
             const isActive = active === t.key;
             if (!isMounted) {
@@ -96,7 +96,7 @@ export default function ServiceCard({
         </div>
 
         {/* Content area that changes */}
-        <div className="flex-1 grid">
+        <div className="grid">
           {tiers.map((tier) => (
             <div
               key={tier.key}
@@ -121,7 +121,7 @@ export default function ServiceCard({
           ))}
         </div>
 
-        <div className="mt-6">
+        <div className="mt-auto pt-6">
           <StarBorder as="a" href={ctaHref} className="w-full text-center" color="#00888a">
             {t("services.cards.getThis")}
           </StarBorder>
