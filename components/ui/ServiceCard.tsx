@@ -45,7 +45,7 @@ export default function ServiceCard({
 
 
   return (
-    <GlowCard accentColor={accent} className={cn("flex flex-col", className)}>
+    <GlowCard accentColor={accent} className={cn("h-full flex flex-col", className)}>
       <div className="p-6 flex flex-col flex-1">
         <div className="flex items-center justify-between gap-3">
           <span
