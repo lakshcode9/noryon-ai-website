@@ -36,7 +36,6 @@ export default function ServiceCard({
 }: ServiceCardProps) {
   const t = useTranslations();
   const [active, setActive] = React.useState<TierKey>(tiers[0]?.key || "basic");
-  const activeTier = tiers.find(t => t.key === active) || tiers[0];
   const [isMounted, setIsMounted] = React.useState(false);
 
   React.useEffect(() => {

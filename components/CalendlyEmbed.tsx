@@ -2,6 +2,16 @@
 
 import { useEffect, useRef } from 'react';
 
+type CalendlyAPI = {
+  initInlineWidget(options: { url: string; parentElement: HTMLElement }): void;
+};
+
+declare global {
+  interface Window {
+    Calendly?: CalendlyAPI;
+  }
+}
+
 interface CalendlyEmbedProps {
   url: string;
   className?: string;
@@ -25,7 +35,7 @@ export default function CalendlyEmbed({
     }
 
     const initialize = () => {
-      const Calendly = (window as any).Calendly;
+      const Calendly = window.Calendly;
       if (!Calendly || !containerRef.current) return;
       // Clear previous content to avoid duplicate iframes on hot reloads
       containerRef.current.innerHTML = '';
@@ -35,10 +45,10 @@ export default function CalendlyEmbed({
     // Load Calendly widget script if not already loaded
     const existingScript = document.querySelector<HTMLScriptElement>('script[src="https://assets.calendly.com/assets/external/widget.js"]');
     if (existingScript) {
-      if ((window as any).Calendly) {
+      if (window.Calendly) {
         initialize();
       } else {
-        existingScript.addEventListener('load', initialize, { once: true } as any);
+        existingScript.addEventListener('load', initialize, { once: true });
       }
       return;
     }
