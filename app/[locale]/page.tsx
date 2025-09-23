@@ -155,7 +155,7 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
             </div>
           </div>
           <div className="mt-10">
-            <StarBorder as="a" href="#contact" color="#00888a">{t("services.ctaProposal")}</StarBorder>
+            <StarBorder as="a" href="#contact" className="mx-auto" color="#00888a">{t("services.ctaProposal")}</StarBorder>
           </div>
         </div>
       </section>
