@@ -22,7 +22,7 @@ export function StarBorder<T extends ElementType = "button">({
 
   return (
     <Component
-      className={cn("relative inline-flex items-center justify-center py-[1px] overflow-hidden rounded-[20px]", className)}
+      className={cn("relative flex items-center justify-center py-[1px] overflow-hidden rounded-[20px]", className)}
       {...props}
     >
       <div
