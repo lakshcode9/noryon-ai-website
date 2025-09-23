@@ -44,7 +44,7 @@ export default function ContactForm() {
         <label className="block text-sm text-white/80 mb-1">{t('contact.form.message')}</label>
         <textarea className="w-full min-h-28 rounded-md bg-secondary ring-1 ring-white/10 px-3 py-2 text-sm placeholder:text-white/60 focus:outline-none" placeholder={t('contact.form.messagePlaceholder')} name="message" suppressHydrationWarning />
       </div>
-      <StarBorder as="button" type="submit" color="#00888a" suppressHydrationWarning>
+      <StarBorder as="button" type="submit" color="#00888a" className="w-full text-center" suppressHydrationWarning>
         {t('contact.form.submit')}
       </StarBorder>
     </form>
