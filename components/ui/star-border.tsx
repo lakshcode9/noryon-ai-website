@@ -7,6 +7,7 @@ interface StarBorderProps<T extends ElementType> {
   speed?: string;
   className?: string;
   size?: "sm" | "md" | "lg";
+  fullWidth?: boolean;
   children: React.ReactNode;
 }
 
@@ -16,6 +17,7 @@ export function StarBorder<T extends ElementType = "button">({
   color,
   speed = "6s",
   size = "md",
+  fullWidth = false,
   children,
   ...props
 }: StarBorderProps<T> & Omit<ComponentPropsWithoutRef<T>, keyof StarBorderProps<T>>) {
@@ -55,7 +57,8 @@ export function StarBorder<T extends ElementType = "button">({
       />
       <div
         className={cn(
-          "relative z-1 inline-flex items-center justify-center text-base rounded-[20px]",
+          "relative z-1 flex items-center justify-center text-base rounded-[20px]",
+          fullWidth && "w-full",
           paddingClass,
           color
             ? "text-white border-transparent"

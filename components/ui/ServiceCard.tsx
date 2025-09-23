@@ -121,7 +121,7 @@ export default function ServiceCard({
         </div>
 
         <div className="mt-auto pt-6 flex">
-          <StarBorder as="a" href={ctaHref} className="mx-auto text-center" color="#00888a" size="sm">
+          <StarBorder as="a" href={ctaHref} className="w-full text-center" color="#00888a" fullWidth>
             {t("services.cards.getThis")}
           </StarBorder>
         </div>
