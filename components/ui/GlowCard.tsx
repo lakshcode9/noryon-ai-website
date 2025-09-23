@@ -41,7 +41,7 @@ export default function GlowCard({
       {/* Content card */}
       <div
         className={cn(
-          "h-full relative rounded-2xl bg-secondary/70 ring-1 ring-white/15 backdrop-blur-[2px]",
+          "h-full relative rounded-2xl bg-secondary/70 ring-1 ring-white/15 backdrop-blur-[2px] flex flex-col",
           "transition-transform duration-300 group-hover:translate-y-[-2px]",
           "shadow-[0_10px_30px_-10px_rgba(0,0,0,0.35)]"
         )}
