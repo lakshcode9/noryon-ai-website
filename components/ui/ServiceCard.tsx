@@ -44,8 +44,8 @@ export default function ServiceCard({
 
 
   return (
-    <GlowCard accentColor={accent} className={cn("h-full flex flex-col min-h-[440px]", className)}>
-      <div className="p-4 flex flex-col flex-1">
+    <GlowCard accentColor={accent} className={cn("h-full flex flex-col min-h-[520px]", className)}>
+      <div className="p-6 flex flex-col flex-1">
         <div className="flex items-center justify-between gap-3">
           <span
             className="inline-block h-2.5 w-2.5 rounded-full shadow-[0_0_14px_6px_rgba(0,202,209,0.35)]"
@@ -65,7 +65,7 @@ export default function ServiceCard({
         </div>
 
         {/* Tier tabs */}
-        <div className="mt-3 flex items-center gap-2">
+        <div className="mt-4 flex items-center gap-2">
           {tiers.map((t) => {
             const isActive = active === t.key;
             if (!isMounted) {
@@ -106,11 +106,11 @@ export default function ServiceCard({
               })}
             >
               {tier?.tagline && (
-                <p className="mt-2 text-sm text-white/90">{tier.tagline}</p>
+                <p className="mt-3 text-sm text-white/90">{tier.tagline}</p>
               )}
 
               {tier?.features?.length ? (
-                <ul className="mt-3 space-y-2 text-sm text-white/80 list-disc list-inside">
+                <ul className="mt-4 space-y-2 text-sm text-white/80 list-disc list-inside">
                   {tier.features.map((f, i) => (
                     <li key={i}>{f}</li>
                   ))}
@@ -120,8 +120,8 @@ export default function ServiceCard({
           ))}
         </div>
 
-        <div className="mt-auto pt-3 flex">
-          <StarBorder as="a" href={ctaHref} className="w-full text-center" color="#00888a" fullWidth>
+        <div className="mt-auto pt-6 flex">
+          <StarBorder as="a" href={ctaHref} className="mx-auto text-center" color="#00888a" size="xs">
             {t("services.cards.getThis")}
           </StarBorder>
         </div>

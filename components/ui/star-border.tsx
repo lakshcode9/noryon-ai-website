@@ -6,7 +6,7 @@ interface StarBorderProps<T extends ElementType> {
   color?: string;
   speed?: string;
   className?: string;
-  size?: "sm" | "md" | "lg";
+  size?: "xs" | "sm" | "md" | "lg";
   fullWidth?: boolean;
   children: React.ReactNode;
 }
@@ -24,7 +24,9 @@ export function StarBorder<T extends ElementType = "button">({
   const Component = (as || "button") as ElementType;
   const defaultColor = color || "hsl(var(--foreground))";
   const paddingClass =
-    size === "sm"
+    size === "xs"
+      ? "py-2 px-3"
+      : size === "sm"
       ? "py-2.5 px-4"
       : size === "lg"
       ? "py-5 px-8"
