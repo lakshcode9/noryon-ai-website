@@ -57,6 +57,17 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className="dark" style={{ colorScheme: "dark" }} suppressHydrationWarning>
+      <head>
+        {/* Performance hints for Spline viewer */}
+        <link rel="preconnect" href="https://unpkg.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://unpkg.com" />
+        <link
+          rel="preload"
+          as="script"
+          href="https://unpkg.com/@splinetool/viewer@1.10.61/build/spline-viewer.js"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body
         className={`${GeistSans.variable} ${GeistMono.variable} antialiased bg-background text-foreground`}
       >
