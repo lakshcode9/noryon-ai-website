@@ -141,7 +141,7 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
                 { key: "full", label: t("services.cards.reputation.tiers.full.label"), tagline: t("services.cards.reputation.tiers.full.tagline"), features: t.raw("services.cards.reputation.tiers.full.features") as string[] },
               ]}
             />
-            <div className="xl:col-span-2">
+            <div className="xl:col-span-2 h-full">
               <ServiceCard
                 title={t("services.cards.analytics.title")}
                 accent="#04a8ae"
