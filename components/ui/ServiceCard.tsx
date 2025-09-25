@@ -50,7 +50,7 @@ export default function ServiceCard({
       accentColor={accent}
       className={cn(
         "h-full flex flex-col",
-        isFR && "min-h-[460px] md:min-h-[500px] xl:min-h-[520px]",
+        isFR && "min-h-[440px] md:min-h-[480px] xl:min-h-[500px]",
         className
       )}
     >
@@ -129,7 +129,7 @@ export default function ServiceCard({
           ))}
         </div>
 
-        <div className={cn(isFR ? "mt-auto pt-6" : "mt-4 pt-3", "flex")}> 
+        <div className={cn(isFR ? "mt-auto pt-4" : "mt-4 pt-3", "flex")}> 
           <StarBorder as="a" href={ctaHref} className={cn("mx-auto", "text-center")} color="#00888a" size="xs">
             {t("services.cards.getThis")}
           </StarBorder>
