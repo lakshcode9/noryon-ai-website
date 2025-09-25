@@ -4,7 +4,7 @@ import React from "react";
 import GlowCard from "./GlowCard";
 import { cn } from "@/lib/utils";
 import { StarBorder } from "@/components/ui/star-border";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 
 type TierKey = "basic" | "smart" | "full";
 
@@ -35,8 +35,6 @@ export default function ServiceCard({
   icon,
 }: ServiceCardProps) {
   const t = useTranslations();
-  const locale = useLocale();
-  const isFR = (locale || "").toLowerCase().startsWith("fr");
   const [active, setActive] = React.useState<TierKey>(tiers[0]?.key || "basic");
   const [isMounted, setIsMounted] = React.useState(false);
 
@@ -46,7 +44,7 @@ export default function ServiceCard({
 
 
   return (
-    <GlowCard accentColor={accent} className={cn("h-full flex flex-col", isFR && "min-h-[520px]", className)}>
+    <GlowCard accentColor={accent} className={cn("h-full flex flex-col", className)}>
       <div className={cn("p-4", "flex flex-col flex-1")}> 
         <div className="flex items-center justify-between gap-3">
           <span
@@ -122,7 +120,7 @@ export default function ServiceCard({
           ))}
         </div>
 
-        <div className={cn(isFR ? "mt-auto pt-6" : "mt-4 pt-3", "flex")}> 
+        <div className={cn("mt-4 pt-3", "flex")}> 
           <StarBorder as="a" href={ctaHref} className={cn("mx-auto", "text-center")} color="#00888a" size="xs">
             {t("services.cards.getThis")}
           </StarBorder>
