@@ -46,7 +46,7 @@ export default function ServiceCard({
 
 
   return (
-    <GlowCard accentColor={accent} className={cn("h-full flex flex-col min-h-[520px]", className)}>
+    <GlowCard accentColor={accent} className={cn("h-full flex flex-col", className)}>
       <div className={cn("p-4", "flex flex-col flex-1")}> 
         <div className="flex items-center justify-between gap-3">
           <span
@@ -122,7 +122,7 @@ export default function ServiceCard({
           ))}
         </div>
 
-        <div className={cn("mt-auto pt-6", "flex")}> 
+        <div className={cn("mt-4 pt-3", "flex")}> 
           <StarBorder as="a" href={ctaHref} className={cn("mx-auto", "text-center")} color="#00888a" size="xs">
             {t("services.cards.getThis")}
           </StarBorder>
