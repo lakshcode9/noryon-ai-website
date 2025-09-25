@@ -46,8 +46,8 @@ export default function ServiceCard({
 
 
   return (
-    <GlowCard accentColor={accent} className={cn("h-full flex flex-col", isFR && "min-h-[520px]", className)}>
-      <div className={cn(isFR ? "p-6" : "p-4", "flex flex-col flex-1")}> 
+    <GlowCard accentColor={accent} className={cn("h-full flex flex-col", className)}>
+      <div className={cn("p-4", "flex flex-col flex-1")}> 
         <div className="flex items-center justify-between gap-3">
           <span
             className="inline-block h-2.5 w-2.5 rounded-full shadow-[0_0_14px_6px_rgba(0,202,209,0.35)]"
@@ -108,11 +108,11 @@ export default function ServiceCard({
               })}
             >
               {tier?.tagline && (
-                <p className={cn(isFR ? "mt-3" : "mt-2", "text-sm text-white/90")}>{tier.tagline}</p>
+                <p className={cn("mt-2", "text-sm text-white/90")}>{tier.tagline}</p>
               )}
 
               {tier?.features?.length ? (
-                <ul className={cn(isFR ? "mt-4" : "mt-3", "space-y-2 text-sm text-white/80 list-disc list-inside")}> 
+                <ul className={cn("mt-3", "space-y-2 text-sm text-white/80 list-disc list-inside")}> 
                   {tier.features.map((f, i) => (
                     <li key={i}>{f}</li>
                   ))}
@@ -122,14 +122,8 @@ export default function ServiceCard({
           ))}
         </div>
 
-        <div className={cn(isFR ? "mt-auto pt-6" : "mt-4 pt-3", "flex")}> 
-          <StarBorder
-            as="a"
-            href={ctaHref}
-            className={cn(isFR ? "w-full" : "mx-auto", "text-center")}
-            color="#00888a"
-            {...(isFR ? { fullWidth: true } : { size: "xs" })}
-          >
+        <div className={cn("mt-4 pt-3", "flex")}> 
+          <StarBorder as="a" href={ctaHref} className={cn("mx-auto", "text-center")} color="#00888a" size="xs">
             {t("services.cards.getThis")}
           </StarBorder>
         </div>
