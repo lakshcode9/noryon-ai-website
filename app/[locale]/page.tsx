@@ -17,6 +17,7 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
   setRequestLocale(locale);
   const t = useTranslations();
   const year = new Date().getFullYear();
+  const isFR = (locale || "").toLowerCase().startsWith("fr");
 
   return (
     <main className="min-h-dvh bg-background text-foreground relative overflow-x-hidden shiny-blue">
@@ -106,6 +107,7 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
             <ServiceCard
               title={t("services.cards.chatbots.title")}
               dotColor="#00cad1"
+              className={isFR ? "min-h-[460px]" : undefined}
               tiers={[
                 { key: "basic", label: t("services.cards.chatbots.tiers.basic.label"), tagline: t("services.cards.chatbots.tiers.basic.tagline"), features: t.raw("services.cards.chatbots.tiers.basic.features") as string[] },
                 { key: "smart", label: t("services.cards.chatbots.tiers.smart.label"), tagline: t("services.cards.chatbots.tiers.smart.tagline"), features: t.raw("services.cards.chatbots.tiers.smart.features") as string[] },
@@ -115,6 +117,7 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
             <ServiceCard
               title={t("services.cards.voice.title")}
               dotColor="#00cad1"
+              className={isFR ? "min-h-[460px]" : undefined}
               tiers={[
                 { key: "basic", label: t("services.cards.voice.tiers.basic.label"), tagline: t("services.cards.voice.tiers.basic.tagline"), features: t.raw("services.cards.voice.tiers.basic.features") as string[] },
                 { key: "smart", label: t("services.cards.voice.tiers.smart.label"), tagline: t("services.cards.voice.tiers.smart.tagline"), features: t.raw("services.cards.voice.tiers.smart.features") as string[] },
@@ -125,6 +128,7 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
               title={t("services.cards.automation.title")}
               accent="#0584af"
               dotColor="#00cad1"
+              className={isFR ? "min-h-[460px]" : undefined}
               tiers={[
                 { key: "basic", label: t("services.cards.automation.tiers.basic.label"), tagline: t("services.cards.automation.tiers.basic.tagline"), features: t.raw("services.cards.automation.tiers.basic.features") as string[] },
                 { key: "smart", label: t("services.cards.automation.tiers.smart.label"), tagline: t("services.cards.automation.tiers.smart.tagline"), features: t.raw("services.cards.automation.tiers.smart.features") as string[] },
@@ -135,6 +139,7 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
               title={t("services.cards.reputation.title")}
               accent="#00c8cf"
               dotColor="#00cad1"
+              className={isFR ? "min-h-[430px]" : undefined}
               tiers={[
                 { key: "basic", label: t("services.cards.reputation.tiers.basic.label"), tagline: t("services.cards.reputation.tiers.basic.tagline"), features: t.raw("services.cards.reputation.tiers.basic.features") as string[] },
                 { key: "smart", label: t("services.cards.reputation.tiers.smart.label"), tagline: t("services.cards.reputation.tiers.smart.tagline"), features: t.raw("services.cards.reputation.tiers.smart.features") as string[] },
@@ -146,6 +151,7 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
                 title={t("services.cards.analytics.title")}
                 accent="#04a8ae"
                 dotColor="#00cad1"
+                className={isFR ? "min-h-[430px]" : undefined}
                 tiers={[
                   { key: "basic", label: t("services.cards.analytics.tiers.basic.label"), tagline: t("services.cards.analytics.tiers.basic.tagline"), features: t.raw("services.cards.analytics.tiers.basic.features") as string[] },
                   { key: "smart", label: t("services.cards.analytics.tiers.smart.label"), tagline: t("services.cards.analytics.tiers.smart.tagline"), features: t.raw("services.cards.analytics.tiers.smart.features") as string[] },
