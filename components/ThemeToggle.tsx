@@ -1,12 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLocale } from "next-intl";
 
 type Theme = "dark" | "light";
 
 export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
   const [theme, setTheme] = useState<Theme>("light");
+  const locale = useLocale?.() as string | undefined;
+  const isFR = (locale || "").toLowerCase().startsWith("fr");
 
   useEffect(() => {
     setMounted(true);
@@ -49,7 +52,11 @@ export default function ThemeToggle() {
       className="inline-flex items-center rounded-md bg-white/5 ring-1 ring-white/10 px-3 py-1.5 text-xs font-medium text-white/90 hover:bg-white/10 transition-colors"
       aria-label="Toggle color theme"
     >
-      {mounted ? (theme === "dark" ? "Light mode" : "Dark mode") : "Theme"}
+      {mounted
+        ? theme === "dark"
+          ? (isFR ? "Mode Clair" : "Light mode")
+          : (isFR ? "Mode Sombre" : "Dark mode")
+        : "Theme"}
     </button>
   );
 }
