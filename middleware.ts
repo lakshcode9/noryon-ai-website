@@ -3,6 +3,7 @@ import {routing} from './i18n/routing';
  
 export default createMiddleware({
   ...routing,
+  localePrefix: 'as-needed',
   localeDetection: false
 });
  
