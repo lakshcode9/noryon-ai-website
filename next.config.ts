@@ -9,6 +9,13 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: __dirname,
   },
+  async redirects() {
+    return [
+      // Ensure FR (default locale) never shows /fr prefix
+      { source: '/fr', destination: '/', permanent: true },
+      { source: '/fr/:path*', destination: '/:path*', permanent: true }
+    ];
+  },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },
