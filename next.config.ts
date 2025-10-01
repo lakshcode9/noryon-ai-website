@@ -13,14 +13,6 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: __dirname,
   },
-  async redirects() {
-    return [
-      // Redirect any French-prefixed path to the root equivalent
-      { source: '/fr', destination: '/', permanent: true },
-      { source: '/fr/', destination: '/', permanent: true },
-      { source: '/fr/:path*', destination: '/:path*', permanent: true }
-    ];
-  },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },
