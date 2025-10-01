@@ -1,6 +1,6 @@
 export const routing = {
   locales: ['fr', 'en'],
-  defaultLocale: 'fr',
-  // Do not prefix the default locale (FR) in the URL; EN will be under /en
+  defaultLocale: 'en',
+  // Do not prefix the default locale (EN) in the URL; FR will be under /fr
   localePrefix: 'as-needed'
 } as const;

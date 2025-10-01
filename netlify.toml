@@ -9,4 +9,22 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# Redirects and rewrites for i18n routing
+[[redirects]]
+  # Rewrite the root to the French version
+  from = "/"
+  to = "/fr"
+  status = 200 # 200 means this is a rewrite
+
+[[redirects]]
+  # Redirect any /fr path to the root
+  from = "/fr/*"
+  to = "/:splat"
+  status = 301 # 301 is a permanent redirect
+
+[[redirects]]
+  from = "/fr"
+  to = "/"
+  status = 301
+
 
