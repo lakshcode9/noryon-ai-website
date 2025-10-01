@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
-import { Quicksand } from "next/font/google";
 import OpeningSplash from "@/components/OpeningSplash";
 import "@/app/globals.css";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
@@ -55,13 +55,6 @@ export default async function RootLayout({
 
   const messages = (await import(`@/messages/${locale}.json`)).default;
 
-  const Quick = Quicksand({
-    subsets: ["latin"],
-    display: "swap",
-    variable: "--font-sans",
-    weight: ["400", "500", "600", "700"],
-  });
-
   return (
     <html lang={locale} className="dark" style={{ colorScheme: "dark" }} suppressHydrationWarning>
       <head>
@@ -76,7 +69,7 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${Quick.variable} ${GeistMono.variable} antialiased bg-background text-foreground`}
+        className={`${GeistSans.variable} ${GeistMono.variable} antialiased bg-background text-foreground`}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <OpeningSplash />

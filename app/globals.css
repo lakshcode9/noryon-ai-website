@@ -2,7 +2,6 @@
 @import "tw-animate-css";
 
 :root {
-  --font-sans: "Quicksand", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -71,7 +70,7 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-/* Light theme overrides using sea palette */
+/* Light theme overrides using provided palette */
 [data-theme="light"] {
   /* Base */
   --background: #202636;
@@ -80,13 +79,13 @@
   --card-foreground: #ffffff;
   --popover: #202636;
   --popover-foreground: #ffffff;
-  --primary: #0584af; /* deep sea blue */
+  --primary: #0584af; /* deep accent for text/icons */
   --primary-foreground: #ffffff;
-  --secondary: #00c8cf18; /* aqua tint */
+  --secondary: #00c8cf18; /* subtle tinted surfaces */
   --secondary-foreground: #202636;
   --muted: #00c8cf14;
   --muted-foreground: #202636;
-  --accent: #04a8ae; /* teal */
+  --accent: #04a8ae;
   --accent-foreground: #ffffff;
   --destructive: #ff5252;
   --border: #ffffff22;
